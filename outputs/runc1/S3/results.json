@@ -1,0 +1,102 @@
+[
+  {
+    "id": "Q-03",
+    "answer": [
+      "Lindenmoor",
+      5.3
+    ],
+    "expected": [
+      "Lindenmoor",
+      5.3
+    ],
+    "correct": true,
+    "unanswered": false,
+    "input_tokens": 2477,
+    "output_tokens": 225,
+    "model_calls": 3,
+    "rounds": 3,
+    "votes": null,
+    "seconds": 5.134,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-08",
+    "answer": [
+      "Brightwater",
+      72.46
+    ],
+    "expected": [
+      "Brightwater",
+      72.46
+    ],
+    "correct": true,
+    "unanswered": false,
+    "input_tokens": 2194,
+    "output_tokens": 154,
+    "model_calls": 3,
+    "rounds": 3,
+    "votes": null,
+    "seconds": 3.428,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-09",
+    "answer": [
+      "Millbrook",
+      0.6
+    ],
+    "expected": [
+      "Millbrook",
+      0.6
+    ],
+    "correct": true,
+    "unanswered": false,
+    "input_tokens": 3348,
+    "output_tokens": 221,
+    "model_calls": 4,
+    "rounds": 4,
+    "votes": null,
+    "seconds": 4.504,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-11",
+    "answer": [
+      "Redfen",
+      56.1
+    ],
+    "expected": [
+      "Redfen",
+      56.1
+    ],
+    "correct": true,
+    "unanswered": false,
+    "input_tokens": 3950,
+    "output_tokens": 291,
+    "model_calls": 4,
+    "rounds": 4,
+    "votes": null,
+    "seconds": 5.427,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-20",
+    "answer": [
+      "Ashgrove",
+      2993.0
+    ],
+    "expected": [
+      "Ashgrove",
+      2993
+    ],
+    "correct": true,
+    "unanswered": false,
+    "input_tokens": 4152,
+    "output_tokens": 331,
+    "model_calls": 4,
+    "rounds": 4,
+    "votes": null,
+    "seconds": 5.408,
+    "temperature_ok": true
+  }
+]
