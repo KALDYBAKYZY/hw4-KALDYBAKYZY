@@ -1,0 +1,84 @@
+{
+  "id": "Q-13",
+  "answer": [
+    "coldharbour",
+    4.16
+  ],
+  "expected": [
+    "Coldharbour",
+    4.16
+  ],
+  "correct": true,
+  "unanswered": false,
+  "input_tokens": 11185,
+  "output_tokens": 854,
+  "model_calls": 5,
+  "rounds": null,
+  "votes": 5,
+  "seconds": 10.202,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2237,
+      "output_tokens": 180,
+      "seconds": 2.001
+    },
+    {
+      "input_tokens": 2237,
+      "output_tokens": 157,
+      "seconds": 2.102
+    },
+    {
+      "input_tokens": 2237,
+      "output_tokens": 165,
+      "seconds": 2.171
+    },
+    {
+      "input_tokens": 2237,
+      "output_tokens": 165,
+      "seconds": 1.888
+    },
+    {
+      "input_tokens": 2237,
+      "output_tokens": 187,
+      "seconds": 2.039
+    }
+  ],
+  "samples": [
+    {
+      "reply": "Facts used:\n- Ossford: population fell from 31,560 to 30,982, a decrease of 578.\n- Stonecairn: population fell from 15,473 to 14,926, a decrease of 547.\n- Coldharbour: population fell from 11,902 to 11,407, a decrease of 495.\n- Percentage loss = decrease ÷ 2020 population × 100.\n- Ossford: 578 ÷ 31,560 × 100 = 1.83%.\n- Stonecairn: 547 ÷ 15,473 × 100 = 3.54%.\n- Coldharbour: 495 ÷ 11,902 × 100 = 4.16%.\n- The largest percentage loss was in Coldharbour.\n\nANSWER: Coldharbour | 4.16",
+      "answer": [
+        "Coldharbour",
+        4.16
+      ]
+    },
+    {
+      "reply": "Facts and calculation:\n\n- Ossford: population fell from 31,560 to 30,982, a decrease of 578. Percentage decrease = 578 ÷ 31,560 × 100 = 1.83%.\n- Stonecairn: population fell from 15,473 to 14,926, a decrease of 547. Percentage decrease = 547 ÷ 15,473 × 100 = 3.54%.\n- Coldharbour: population fell from 11,902 to 11,407, a decrease of 495. Percentage decrease = 495 ÷ 11,902 × 100 = 4.16%.\n\nColdharbour lost the largest percentage.\n\nANSWER: Coldharbour | 4.16",
+      "answer": [
+        "Coldharbour",
+        4.16
+      ]
+    },
+    {
+      "reply": "Facts and calculations:\n\n- Ossford: population fell from 31,560 to 30,982, a decrease of 578.  \n  Percentage loss = 578 ÷ 31,560 × 100 = 1.83%.\n\n- Stonecairn: population fell from 15,473 to 14,926, a decrease of 547.  \n  Percentage loss = 547 ÷ 15,473 × 100 = 3.54%.\n\n- Coldharbour: population fell from 11,902 to 11,407, a decrease of 495.  \n  Percentage loss = 495 ÷ 11,902 × 100 = 4.16%.\n\nColdharbour had the largest percentage population loss.\n\nANSWER: Coldharbour | 4.16",
+      "answer": [
+        "Coldharbour",
+        4.16
+      ]
+    },
+    {
+      "reply": "Facts and calculations:\n\n- Ossford: population fell from 31,560 to 30,982, a loss of 578.  \n  Percentage loss = 578 ÷ 31,560 × 100 = 1.83%.\n\n- Stonecairn: population fell from 15,473 to 14,926, a loss of 547.  \n  Percentage loss = 547 ÷ 15,473 × 100 = 3.54%.\n\n- Coldharbour: population fell from 11,902 to 11,407, a loss of 495.  \n  Percentage loss = 495 ÷ 11,902 × 100 = 4.16%.\n\nColdharbour had the largest percentage population decline.\n\nANSWER: Coldharbour | 4.16",
+      "answer": [
+        "Coldharbour",
+        4.16
+      ]
+    },
+    {
+      "reply": "Facts and calculations:\n\n- Ossford: population fell from 31,560 to 30,982, a loss of 578.\n  - Percentage loss = 578 ÷ 31,560 × 100 = 1.8314% → **1.83%**\n- Stonecairn: population fell from 15,473 to 14,926, a loss of 547.\n  - Percentage loss = 547 ÷ 15,473 × 100 = 3.5359% → **3.54%**\n- Coldharbour: population fell from 11,902 to 11,407, a loss of 495.\n  - Percentage loss = 495 ÷ 11,902 × 100 = 4.1581% → **4.16%**\n\nColdharbour lost the largest percentage.\n\nANSWER: Coldharbour | 4.16",
+      "answer": [
+        "Coldharbour",
+        4.16
+      ]
+    }
+  ]
+}

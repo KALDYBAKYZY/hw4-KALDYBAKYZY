@@ -1,0 +1,28 @@
+{
+  "id": "Q-07",
+  "answer": [
+    "Coldharbour",
+    18.88
+  ],
+  "expected": [
+    "Coldharbour",
+    18.5
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 2227,
+  "output_tokens": 13,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 1.457,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2227,
+      "output_tokens": 13,
+      "seconds": 1.457
+    }
+  ],
+  "reply": "ANSWER: Coldharbour | 18.88"
+}

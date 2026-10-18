@@ -1,0 +1,402 @@
+[
+  {
+    "id": "Q-01",
+    "answer": [
+      "Ossbridge",
+      24.5
+    ],
+    "expected": [
+      "Ossbridge",
+      4.6
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2217,
+    "output_tokens": 12,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.447,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-02",
+    "answer": [
+      "Harrowfield",
+      1.13
+    ],
+    "expected": [
+      "Harrowfield",
+      1.69
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2223,
+    "output_tokens": 13,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.063,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-03",
+    "answer": [
+      "Lindenmoor",
+      6.1
+    ],
+    "expected": [
+      "Lindenmoor",
+      5.3
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2223,
+    "output_tokens": 12,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.194,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-04",
+    "answer": [
+      "Ashgrove",
+      0.68
+    ],
+    "expected": [
+      "Millbrook",
+      2.59
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2218,
+    "output_tokens": 13,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.042,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-05",
+    "answer": [
+      "Coldharbour",
+      42042.0
+    ],
+    "expected": [
+      "Coldharbour",
+      14235
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2219,
+    "output_tokens": 12,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.213,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-06",
+    "answer": [
+      "yes",
+      24069.0
+    ],
+    "expected": [
+      "yes",
+      14069
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2223,
+    "output_tokens": 10,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 0.991,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-07",
+    "answer": [
+      "Coldharbour",
+      18.88
+    ],
+    "expected": [
+      "Coldharbour",
+      18.5
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2227,
+    "output_tokens": 13,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.457,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-08",
+    "answer": [
+      "Brightwater",
+      72.39
+    ],
+    "expected": [
+      "Brightwater",
+      72.46
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2225,
+    "output_tokens": 12,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.541,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-09",
+    "answer": [
+      "Brightwater",
+      2.2
+    ],
+    "expected": [
+      "Millbrook",
+      0.6
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2217,
+    "output_tokens": 12,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.266,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-10",
+    "answer": [
+      "Stonecairn",
+      8.0
+    ],
+    "expected": [
+      "Stonecairn",
+      8
+    ],
+    "correct": true,
+    "unanswered": false,
+    "input_tokens": 2214,
+    "output_tokens": 12,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.492,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-11",
+    "answer": [
+      "Redfen",
+      373.37
+    ],
+    "expected": [
+      "Redfen",
+      56.1
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2232,
+    "output_tokens": 12,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.027,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-12",
+    "answer": [
+      "Harrowfield",
+      181.6
+    ],
+    "expected": [
+      "Tarnvale",
+      64.4
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2220,
+    "output_tokens": 13,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.123,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-13",
+    "answer": [
+      "Coldharbour",
+      4.16
+    ],
+    "expected": [
+      "Coldharbour",
+      4.16
+    ],
+    "correct": true,
+    "unanswered": false,
+    "input_tokens": 2228,
+    "output_tokens": 13,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.147,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-14",
+    "answer": [
+      "Tarnvale",
+      0.1
+    ],
+    "expected": [
+      "Ashgrove",
+      4.9
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2223,
+    "output_tokens": 12,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.22,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-15",
+    "answer": [
+      "Kelmarsh",
+      5.68
+    ],
+    "expected": [
+      "Redfen",
+      17.61
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2218,
+    "output_tokens": 13,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.319,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-16",
+    "answer": [
+      "yes",
+      23.9
+    ],
+    "expected": [
+      "yes",
+      23.9
+    ],
+    "correct": true,
+    "unanswered": false,
+    "input_tokens": 2217,
+    "output_tokens": 11,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.227,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-17",
+    "answer": [
+      "Harrowfield",
+      8.0
+    ],
+    "expected": [
+      "Harrowfield",
+      884
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2229,
+    "output_tokens": 11,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.072,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-18",
+    "answer": [
+      "yes",
+      399.0
+    ],
+    "expected": [
+      "yes",
+      40013
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2240,
+    "output_tokens": 10,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.095,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-19",
+    "answer": [
+      "Redfen",
+      0.093
+    ],
+    "expected": [
+      "Lindenmoor",
+      0.035
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2217,
+    "output_tokens": 12,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 0.935,
+    "temperature_ok": true
+  },
+  {
+    "id": "Q-20",
+    "answer": [
+      "Harrowfield",
+      77.0
+    ],
+    "expected": [
+      "Ashgrove",
+      2993
+    ],
+    "correct": false,
+    "unanswered": false,
+    "input_tokens": 2230,
+    "output_tokens": 11,
+    "model_calls": 1,
+    "rounds": null,
+    "votes": null,
+    "seconds": 1.195,
+    "temperature_ok": true
+  }
+]

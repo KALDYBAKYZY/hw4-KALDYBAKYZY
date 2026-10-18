@@ -1,0 +1,28 @@
+{
+  "id": "Q-12",
+  "answer": [
+    "Harrowfield",
+    219.0
+  ],
+  "expected": [
+    "Tarnvale",
+    64.4
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 2220,
+  "output_tokens": 13,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 1.057,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2220,
+      "output_tokens": 13,
+      "seconds": 1.056
+    }
+  ],
+  "reply": "ANSWER: Harrowfield | 219.0"
+}

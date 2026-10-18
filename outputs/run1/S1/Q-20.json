@@ -1,0 +1,28 @@
+{
+  "id": "Q-20",
+  "answer": [
+    "Harrowfield",
+    77.0
+  ],
+  "expected": [
+    "Ashgrove",
+    2993
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 2230,
+  "output_tokens": 11,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 1.195,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2230,
+      "output_tokens": 11,
+      "seconds": 1.195
+    }
+  ],
+  "reply": "ANSWER: Harrowfield | 77"
+}

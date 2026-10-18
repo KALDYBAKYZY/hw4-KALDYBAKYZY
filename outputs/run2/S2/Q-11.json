@@ -1,0 +1,84 @@
+{
+  "id": "Q-11",
+  "answer": [
+    "redfen",
+    56.1
+  ],
+  "expected": [
+    "Redfen",
+    56.1
+  ],
+  "correct": true,
+  "unanswered": false,
+  "input_tokens": 11205,
+  "output_tokens": 588,
+  "model_calls": 5,
+  "rounds": null,
+  "votes": 5,
+  "seconds": 10.382,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2241,
+      "output_tokens": 118,
+      "seconds": 1.675
+    },
+    {
+      "input_tokens": 2241,
+      "output_tokens": 116,
+      "seconds": 2.639
+    },
+    {
+      "input_tokens": 2241,
+      "output_tokens": 118,
+      "seconds": 2.27
+    },
+    {
+      "input_tokens": 2241,
+      "output_tokens": 118,
+      "seconds": 2.336
+    },
+    {
+      "input_tokens": 2241,
+      "output_tokens": 118,
+      "seconds": 1.461
+    }
+  ],
+  "samples": [
+    {
+      "reply": "Facts and calculations:\n\n- Redfen: 3,147 pupils ÷ 10 schools = 314.70 pupils per school.\n- Ashgrove: 8,837 pupils ÷ 24 schools = 368.21 pupils per school.\n- Millbrook: 5,562 pupils ÷ 15 schools = 370.80 pupils per school.\n- Fewest: Redfen.\n- Difference between highest and lowest: 370.80 − 314.70 = 56.10 pupils per school.\n\nANSWER: Redfen | 56.10",
+      "answer": [
+        "Redfen",
+        56.1
+      ]
+    },
+    {
+      "reply": "Facts:\n- Redfen: 3,147 pupils ÷ 10 schools = 314.70 pupils per school.\n- Ashgrove: 8,837 pupils ÷ 24 schools = 368.21 pupils per school.\n- Millbrook: 5,562 pupils ÷ 15 schools = 370.80 pupils per school.\n- Fewest: Redfen.\n- Difference between highest and lowest: 370.80 − 314.70 = 56.10 pupils per school.\n\nANSWER: Redfen | 56.10",
+      "answer": [
+        "Redfen",
+        56.1
+      ]
+    },
+    {
+      "reply": "Facts and calculations:\n\n- Redfen: 3,147 pupils ÷ 10 schools = 314.70 pupils per school.\n- Ashgrove: 8,837 pupils ÷ 24 schools = 368.21 pupils per school.\n- Millbrook: 5,562 pupils ÷ 15 schools = 370.80 pupils per school.\n- Fewest: Redfen.\n- Difference between highest and lowest: 370.80 − 314.70 = 56.10 pupils per school.\n\nANSWER: Redfen | 56.10",
+      "answer": [
+        "Redfen",
+        56.1
+      ]
+    },
+    {
+      "reply": "Facts and calculations:\n\n- Redfen: 3,147 pupils ÷ 10 schools = 314.70 pupils per school.\n- Ashgrove: 8,837 pupils ÷ 24 schools = 368.21 pupils per school.\n- Millbrook: 5,562 pupils ÷ 15 schools = 370.80 pupils per school.\n- Fewest: Redfen.\n- Difference between highest and lowest: 370.80 − 314.70 = 56.10 pupils per school.\n\nANSWER: Redfen | 56.10",
+      "answer": [
+        "Redfen",
+        56.1
+      ]
+    },
+    {
+      "reply": "Facts and calculations:\n\n- Redfen: 3,147 pupils ÷ 10 schools = 314.70 pupils per school.\n- Ashgrove: 8,837 pupils ÷ 24 schools = 368.21 pupils per school.\n- Millbrook: 5,562 pupils ÷ 15 schools = 370.80 pupils per school.\n- Fewest: Redfen.\n- Difference between highest and lowest: 370.80 − 314.70 = 56.10 pupils per school.\n\nANSWER: Redfen | 56.10",
+      "answer": [
+        "Redfen",
+        56.1
+      ]
+    }
+  ]
+}

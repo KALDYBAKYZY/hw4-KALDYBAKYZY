@@ -1,0 +1,28 @@
+{
+  "id": "Q-08",
+  "answer": [
+    "Brightwater",
+    72.36
+  ],
+  "expected": [
+    "Brightwater",
+    72.46
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 2225,
+  "output_tokens": 12,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 1.138,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2225,
+      "output_tokens": 12,
+      "seconds": 1.138
+    }
+  ],
+  "reply": "ANSWER: Brightwater | 72.36"
+}

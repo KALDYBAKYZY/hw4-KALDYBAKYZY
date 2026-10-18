@@ -1,0 +1,84 @@
+{
+  "id": "Q-03",
+  "answer": [
+    "lindenmoor",
+    5.3
+  ],
+  "expected": [
+    "Lindenmoor",
+    5.3
+  ],
+  "correct": true,
+  "unanswered": false,
+  "input_tokens": 11160,
+  "output_tokens": 943,
+  "model_calls": 5,
+  "rounds": null,
+  "votes": 5,
+  "seconds": 11.087,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2232,
+      "output_tokens": 190,
+      "seconds": 2.148
+    },
+    {
+      "input_tokens": 2232,
+      "output_tokens": 169,
+      "seconds": 2.124
+    },
+    {
+      "input_tokens": 2232,
+      "output_tokens": 190,
+      "seconds": 2.211
+    },
+    {
+      "input_tokens": 2232,
+      "output_tokens": 190,
+      "seconds": 2.2
+    },
+    {
+      "input_tokens": 2232,
+      "output_tokens": 204,
+      "seconds": 2.404
+    }
+  ],
+  "samples": [
+    {
+      "reply": "Facts and calculations:\n\n- Lindenmoor: 2,151,400 cubic metres of water and 29,051 residents.\n- Kelmarsh: 1,739 megalitres = 1,739,000 cubic metres, with 24,117 residents.\n- One cubic metre equals 1,000 litres; 2025 has 365 days.\n- Lindenmoor: \\(2,151,400 \\times 1,000 \\div 29,051 \\div 365 = 202.9\\) litres per resident per day.\n- Kelmarsh: \\(1,739,000 \\times 1,000 \\div 24,117 \\div 365 = 197.6\\) litres per resident per day.\n- Difference: \\(202.9 - 197.6 = 5.3\\) litres per resident per day.\n\nANSWER: Lindenmoor | 5.3",
+      "answer": [
+        "Lindenmoor",
+        5.3
+      ]
+    },
+    {
+      "reply": "Facts and calculation:\n- Lindenmoor: 2,151,400 cubic metres of water, 29,051 residents.\n- Kelmarsh: 1,739 megalitres = 1,739,000 cubic metres, 24,117 residents.\n- Convert to litres and divide by 365 days:\n  - Lindenmoor: 2,151,400,000 ÷ 29,051 ÷ 365 = 202.9 litres per resident per day.\n  - Kelmarsh: 1,739,000,000 ÷ 24,117 ÷ 365 = 197.6 litres per resident per day.\n- Difference: 202.9 − 197.6 = 5.3 litres per resident per day.\n\nANSWER: Lindenmoor | 5.3",
+      "answer": [
+        "Lindenmoor",
+        5.3
+      ]
+    },
+    {
+      "reply": "Facts and calculations:\n\n- Lindenmoor: 2,151,400 cubic metres of water and 29,051 residents.\n- Kelmarsh: 1,739 megalitres = 1,739,000 cubic metres, with 24,117 residents.\n- One cubic metre equals 1,000 litres; 2025 has 365 days.\n- Lindenmoor: \\(2,151,400 \\times 1,000 \\div 29,051 \\div 365 = 202.9\\) litres per resident per day.\n- Kelmarsh: \\(1,739,000 \\times 1,000 \\div 24,117 \\div 365 = 197.6\\) litres per resident per day.\n- Difference: \\(202.9 - 197.6 = 5.3\\) litres per resident per day.\n\nANSWER: Lindenmoor | 5.3",
+      "answer": [
+        "Lindenmoor",
+        5.3
+      ]
+    },
+    {
+      "reply": "Facts and calculation:\n\n- Lindenmoor: 2,151,400 cubic metres of water and 29,051 residents.\n- Kelmarsh: 1,739 megalitres = 1,739,000 cubic metres, with 24,117 residents.\n- One cubic metre = 1,000 litres; 2025 has 365 days.\n- Lindenmoor: \\(2,151,400 \\times 1,000 \\div 29,051 \\div 365 = 202.9\\) litres per resident per day.\n- Kelmarsh: \\(1,739,000 \\times 1,000 \\div 24,117 \\div 365 = 197.6\\) litres per resident per day.\n- Difference: \\(202.9 - 197.6 = 5.3\\) litres per resident per day.\n\nANSWER: Lindenmoor | 5.3",
+      "answer": [
+        "Lindenmoor",
+        5.3
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Lindenmoor: 29,051 residents; 2,151,400 cubic metres of household water in 2025.\n- Kelmarsh: 24,117 residents; 1,739 megalitres of household water in 2025.\n- 1 megalitre = 1,000 cubic metres; 1 cubic metre = 1,000 litres.\n- 2025 has 365 days.\n\nCalculations:\n- Lindenmoor: 2,151,400 m³ × 1,000 ÷ 29,051 ÷ 365 = 202.9 litres per resident per day.\n- Kelmarsh: 1,739 ML × 1,000,000 ÷ 24,117 ÷ 365 = 197.6 litres per resident per day.\n- Difference: 202.9 − 197.6 = 5.3 litres per resident per day.\n\nANSWER: Lindenmoor | 5.3",
+      "answer": [
+        "Lindenmoor",
+        5.3
+      ]
+    }
+  ]
+}

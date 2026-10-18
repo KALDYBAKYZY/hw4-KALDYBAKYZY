@@ -1,0 +1,149 @@
+{
+  "id": "Q-10",
+  "answer": [
+    "Stonecairn",
+    8.0
+  ],
+  "expected": [
+    "Stonecairn",
+    8
+  ],
+  "correct": true,
+  "unanswered": false,
+  "input_tokens": 2104,
+  "output_tokens": 110,
+  "model_calls": 3,
+  "rounds": 3,
+  "votes": null,
+  "seconds": 4.608,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 556,
+      "output_tokens": 62,
+      "seconds": 1.676
+    },
+    {
+      "input_tokens": 750,
+      "output_tokens": 21,
+      "seconds": 1.12
+    },
+    {
+      "input_tokens": 798,
+      "output_tokens": 27,
+      "seconds": 1.812
+    }
+  ],
+  "tool_calls": [
+    {
+      "round": 1,
+      "id": "call_2F7QUJU4IgQctUoFUjVtFkGI",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Stonecairn\", \"field\": \"founded_year\"}",
+      "result": {
+        "district": "Stonecairn",
+        "field": "founded_year",
+        "value": 1837,
+        "unit": "year",
+        "sources": [
+          "NR-06"
+        ],
+        "sentence": "Stonecairn lies on the Cairn Water and was founded in 1837."
+      },
+      "ms": 0.305
+    },
+    {
+      "round": 1,
+      "id": "call_iqvX3Z7TOwJG8McvRfaAXX6p",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Coldharbour\", \"field\": \"founded_year\"}",
+      "result": {
+        "district": "Coldharbour",
+        "field": "founded_year",
+        "value": 1845,
+        "unit": "year",
+        "sources": [
+          "NR-12"
+        ],
+        "sentence": "Coldharbour lies on the Cold and was founded in 1845."
+      },
+      "ms": 0.047
+    },
+    {
+      "round": 2,
+      "id": "call_Rx1pBKOJsWlZU8cfmlXVhNOg",
+      "tool": "calculate",
+      "arguments": "{\"expression\":\"1845 - 1837\"}",
+      "result": {
+        "expression": "1845 - 1837",
+        "result": 8
+      },
+      "ms": 0.188
+    }
+  ],
+  "messages": [
+    {
+      "role": "system",
+      "content": "You answer questions about the Nine Rivers Region. You do not have the documents. Use the lookup tool for every fact and the calculate tool for every calculation. You may call several tools in one turn when they do not depend on each other.\n\nEnd your reply with exactly one last line in this format:\nANSWER: <district name or yes/no> | <number>\nWrite the number without units and without thousand separators."
+    },
+    {
+      "role": "user",
+      "content": "Which district is older, Stonecairn or Coldharbour, and how many years older is it than the other?\nRound the number to 0 decimal places."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_2F7QUJU4IgQctUoFUjVtFkGI",
+          "type": "function",
+          "function": {
+            "name": "lookup",
+            "arguments": "{\"district\": \"Stonecairn\", \"field\": \"founded_year\"}"
+          }
+        },
+        {
+          "id": "call_iqvX3Z7TOwJG8McvRfaAXX6p",
+          "type": "function",
+          "function": {
+            "name": "lookup",
+            "arguments": "{\"district\": \"Coldharbour\", \"field\": \"founded_year\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_2F7QUJU4IgQctUoFUjVtFkGI",
+      "content": "{\"district\": \"Stonecairn\", \"field\": \"founded_year\", \"value\": 1837, \"unit\": \"year\", \"sources\": [\"NR-06\"], \"sentence\": \"Stonecairn lies on the Cairn Water and was founded in 1837.\"}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_iqvX3Z7TOwJG8McvRfaAXX6p",
+      "content": "{\"district\": \"Coldharbour\", \"field\": \"founded_year\", \"value\": 1845, \"unit\": \"year\", \"sources\": [\"NR-12\"], \"sentence\": \"Coldharbour lies on the Cold and was founded in 1845.\"}"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_Rx1pBKOJsWlZU8cfmlXVhNOg",
+          "type": "function",
+          "function": {
+            "name": "calculate",
+            "arguments": "{\"expression\":\"1845 - 1837\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_Rx1pBKOJsWlZU8cfmlXVhNOg",
+      "content": "{\"expression\": \"1845 - 1837\", \"result\": 8}"
+    },
+    {
+      "role": "assistant",
+      "content": "Stonecairn is older than Coldharbour by 8 years.\n\nANSWER: Stonecairn | 8"
+    }
+  ]
+}

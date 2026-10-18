@@ -1,0 +1,84 @@
+{
+  "id": "Q-19",
+  "answer": [
+    "lindenmoor",
+    0.035
+  ],
+  "expected": [
+    "Lindenmoor",
+    0.035
+  ],
+  "correct": true,
+  "unanswered": false,
+  "input_tokens": 11130,
+  "output_tokens": 709,
+  "model_calls": 5,
+  "rounds": null,
+  "votes": 5,
+  "seconds": 9.426,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2226,
+      "output_tokens": 141,
+      "seconds": 1.775
+    },
+    {
+      "input_tokens": 2226,
+      "output_tokens": 165,
+      "seconds": 1.945
+    },
+    {
+      "input_tokens": 2226,
+      "output_tokens": 141,
+      "seconds": 1.818
+    },
+    {
+      "input_tokens": 2226,
+      "output_tokens": 132,
+      "seconds": 2.009
+    },
+    {
+      "input_tokens": 2226,
+      "output_tokens": 130,
+      "seconds": 1.879
+    }
+  ],
+  "samples": [
+    {
+      "reply": "Facts used:\n- Lindenmoor: 402.3 km of paved roads and 1,015.7 km² of area.\n- Redfen: 244.6 km of paved roads and 677.1 km² of area.\n- Lindenmoor road density = 402.3 ÷ 1,015.7 = 0.396 km/km².\n- Redfen road density = 244.6 ÷ 677.1 = 0.361 km/km².\n- Difference = 0.396 − 0.361 = 0.035 km/km², rounded to 3 decimal places.\n\nANSWER: Lindenmoor | 0.035",
+      "answer": [
+        "Lindenmoor",
+        0.035
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Lindenmoor: 402.3 km of paved roads and 1,015.7 km² of area.\n- Redfen: 244.6 km of paved roads and 677.1 km² of area.\n\nCalculations:\n- Lindenmoor density = 402.3 ÷ 1,015.7 = 0.396 km/km².\n- Redfen density = 244.6 ÷ 677.1 = 0.361 km/km².\n- Difference = 0.396262... − 0.361248... = 0.035014... km/km².\n- Rounded to 3 decimal places: 0.035.\n\nLindenmoor has the denser paved road network.\n\nANSWER: Lindenmoor | 0.035",
+      "answer": [
+        "Lindenmoor",
+        0.035
+      ]
+    },
+    {
+      "reply": "Facts and calculation:\n- Lindenmoor: 402.3 km of paved roads over 1,015.7 km².\n- Redfen: 244.6 km of paved roads over 677.1 km².\n- Lindenmoor density = 402.3 ÷ 1,015.7 = 0.396 km/km².\n- Redfen density = 244.6 ÷ 677.1 = 0.361 km/km².\n- Difference = 0.396168... − 0.361248... = 0.034920... ≈ 0.035 km/km².\n\nANSWER: Lindenmoor | 0.035",
+      "answer": [
+        "Lindenmoor",
+        0.035
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Lindenmoor: 402.3 km of paved roads and 1,015.7 km² of area.\n- Redfen: 244.6 km of paved roads and 677.1 km² of area.\n- Lindenmoor density: 402.3 ÷ 1,015.7 = 0.396 km/km².\n- Redfen density: 244.6 ÷ 677.1 = 0.361 km/km².\n- Difference: 0.396 − 0.361 = 0.035 km/km².\n\nANSWER: Lindenmoor | 0.035",
+      "answer": [
+        "Lindenmoor",
+        0.035
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Lindenmoor: 402.3 km of paved roads; area 1,015.7 km².\n- Redfen: 244.6 km of paved roads; area 677.1 km².\n- Lindenmoor density = 402.3 ÷ 1,015.7 = 0.396 km/km².\n- Redfen density = 244.6 ÷ 677.1 = 0.361 km/km².\n- Difference = 0.396 - 0.361 = 0.035 km/km².\n\nANSWER: Lindenmoor | 0.035",
+      "answer": [
+        "Lindenmoor",
+        0.035
+      ]
+    }
+  ]
+}

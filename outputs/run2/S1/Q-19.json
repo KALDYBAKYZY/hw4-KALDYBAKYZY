@@ -1,0 +1,28 @@
+{
+  "id": "Q-19",
+  "answer": [
+    "Redfen",
+    0.014
+  ],
+  "expected": [
+    "Lindenmoor",
+    0.035
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 2217,
+  "output_tokens": 12,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 1.074,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2217,
+      "output_tokens": 12,
+      "seconds": 1.074
+    }
+  ],
+  "reply": "ANSWER: Redfen | 0.014"
+}

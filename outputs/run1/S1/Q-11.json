@@ -1,0 +1,28 @@
+{
+  "id": "Q-11",
+  "answer": [
+    "Redfen",
+    373.37
+  ],
+  "expected": [
+    "Redfen",
+    56.1
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 2232,
+  "output_tokens": 12,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 1.027,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2232,
+      "output_tokens": 12,
+      "seconds": 1.027
+    }
+  ],
+  "reply": "ANSWER: Redfen | 373.37"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "Q-10",
+  "answer": [
+    "stonecairn",
+    8.0
+  ],
+  "expected": [
+    "Stonecairn",
+    8
+  ],
+  "correct": true,
+  "unanswered": false,
+  "input_tokens": 11115,
+  "output_tokens": 323,
+  "model_calls": 5,
+  "rounds": null,
+  "votes": 5,
+  "seconds": 7.063,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2223,
+      "output_tokens": 71,
+      "seconds": 1.352
+    },
+    {
+      "input_tokens": 2223,
+      "output_tokens": 60,
+      "seconds": 1.457
+    },
+    {
+      "input_tokens": 2223,
+      "output_tokens": 61,
+      "seconds": 1.488
+    },
+    {
+      "input_tokens": 2223,
+      "output_tokens": 60,
+      "seconds": 1.293
+    },
+    {
+      "input_tokens": 2223,
+      "output_tokens": 71,
+      "seconds": 1.472
+    }
+  ],
+  "samples": [
+    {
+      "reply": "Facts:\n- Stonecairn was founded in 1837.\n- Coldharbour was founded in 1845.\n- Stonecairn is older.\n- Difference: 1845 − 1837 = 8 years.\n- Rounded to 0 decimal places: 8.\n\nANSWER: Stonecairn | 8",
+      "answer": [
+        "Stonecairn",
+        8.0
+      ]
+    },
+    {
+      "reply": "Facts:\n- Stonecairn was founded in 1837.\n- Coldharbour was founded in 1845.\n- Stonecairn is older.\n- Calculation: 1845 − 1837 = 8 years.\n\nANSWER: Stonecairn | 8",
+      "answer": [
+        "Stonecairn",
+        8.0
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Stonecairn was founded in 1837.\n- Coldharbour was founded in 1845.\n- Stonecairn is older.\n- Calculation: 1845 − 1837 = 8 years.\n\nANSWER: Stonecairn | 8",
+      "answer": [
+        "Stonecairn",
+        8.0
+      ]
+    },
+    {
+      "reply": "Facts:\n- Stonecairn was founded in 1837.\n- Coldharbour was founded in 1845.\n- Difference: 1845 − 1837 = 8 years.\n- Stonecairn is older.\n\nANSWER: Stonecairn | 8",
+      "answer": [
+        "Stonecairn",
+        8.0
+      ]
+    },
+    {
+      "reply": "Facts:\n- Stonecairn was founded in 1837.\n- Coldharbour was founded in 1845.\n- Stonecairn is older.\n- Difference: 1845 − 1837 = 8 years.\n- Rounded to 0 decimal places: 8.\n\nANSWER: Stonecairn | 8",
+      "answer": [
+        "Stonecairn",
+        8.0
+      ]
+    }
+  ]
+}

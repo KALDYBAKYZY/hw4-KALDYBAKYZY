@@ -1,0 +1,84 @@
+{
+  "id": "Q-15",
+  "answer": [
+    "redfen",
+    17.61
+  ],
+  "expected": [
+    "Redfen",
+    17.61
+  ],
+  "correct": true,
+  "unanswered": false,
+  "input_tokens": 11135,
+  "output_tokens": 538,
+  "model_calls": 5,
+  "rounds": null,
+  "votes": 4,
+  "seconds": 8.411,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2227,
+      "output_tokens": 111,
+      "seconds": 1.778
+    },
+    {
+      "input_tokens": 2227,
+      "output_tokens": 111,
+      "seconds": 1.742
+    },
+    {
+      "input_tokens": 2227,
+      "output_tokens": 117,
+      "seconds": 1.702
+    },
+    {
+      "input_tokens": 2227,
+      "output_tokens": 107,
+      "seconds": 1.541
+    },
+    {
+      "input_tokens": 2227,
+      "output_tokens": 92,
+      "seconds": 1.648
+    }
+  ],
+  "samples": [
+    {
+      "reply": "Facts used:\n- Kelmarsh: 3,268 pupils across 11 schools.\n- Redfen: 3,147 pupils across 10 schools.\n\nCalculations:\n- Kelmarsh: 3,268 ÷ 11 = 297.09 pupils per school.\n- Redfen: 3,147 ÷ 10 = 314.70 pupils per school.\n- Difference: 314.70 − 297.09 = 17.61 pupils per school.\n\nANSWER: Redfen | 17.61",
+      "answer": [
+        "Redfen",
+        17.61
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Kelmarsh: 3,268 pupils across 11 schools.\n- Redfen: 3,147 pupils across 10 schools.\n\nCalculations:\n- Kelmarsh: 3,268 ÷ 11 = 297.09 pupils per school.\n- Redfen: 3,147 ÷ 10 = 314.70 pupils per school.\n- Difference: 314.70 − 297.09 = 17.61 pupils per school.\n\nANSWER: Redfen | 17.61",
+      "answer": [
+        "Redfen",
+        17.61
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Kelmarsh: 3,268 pupils across 11 schools.\n- Redfen: 3,147 pupils across 10 schools.\n- Kelmarsh pupils per school: 3,268 ÷ 11 = 297.0909...\n- Redfen pupils per school: 3,147 ÷ 10 = 314.7.\n- Difference: 314.7 − 297.0909... = 17.6091..., which rounds to 17.61.\n\nANSWER: Redfen | 17.61",
+      "answer": [
+        "Redfen",
+        17.61
+      ]
+    },
+    {
+      "reply": "Facts:\n- Kelmarsh: 3,268 pupils across 11 schools.\n- Redfen: 3,147 pupils across 10 schools.\n- Kelmarsh pupils per school: 3,268 ÷ 11 = 297.09.\n- Redfen pupils per school: 3,147 ÷ 10 = 314.70.\n- Difference: 314.70 − 297.09 = 17.61 pupils per school.\n\nANSWER: Redfen | 17.61",
+      "answer": [
+        "Redfen",
+        17.61
+      ]
+    },
+    {
+      "reply": "Facts and calculation:\n- Kelmarsh: 3,268 pupils ÷ 11 schools = 296.909... pupils per school.\n- Redfen: 3,147 pupils ÷ 10 schools = 314.7 pupils per school.\n- Difference: 314.7 − 296.909... = 17.7909..., which rounds to 17.79.\n\nANSWER: Redfen | 17.79",
+      "answer": [
+        "Redfen",
+        17.79
+      ]
+    }
+  ]
+}

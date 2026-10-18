@@ -1,0 +1,28 @@
+{
+  "id": "Q-01",
+  "answer": [
+    "Ossbridge",
+    24.5
+  ],
+  "expected": [
+    "Ossbridge",
+    4.6
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 2217,
+  "output_tokens": 12,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 1.447,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2217,
+      "output_tokens": 12,
+      "seconds": 1.447
+    }
+  ],
+  "reply": "ANSWER: Ossbridge | 24.5"
+}

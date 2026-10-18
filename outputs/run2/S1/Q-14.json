@@ -1,0 +1,28 @@
+{
+  "id": "Q-14",
+  "answer": [
+    "Tarnvale",
+    0.7
+  ],
+  "expected": [
+    "Ashgrove",
+    4.9
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 2223,
+  "output_tokens": 12,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 1.111,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2223,
+      "output_tokens": 12,
+      "seconds": 1.111
+    }
+  ],
+  "reply": "ANSWER: Tarnvale | 0.7"
+}

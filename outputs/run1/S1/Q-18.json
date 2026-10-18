@@ -1,0 +1,28 @@
+{
+  "id": "Q-18",
+  "answer": [
+    "yes",
+    399.0
+  ],
+  "expected": [
+    "yes",
+    40013
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 2240,
+  "output_tokens": 10,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 1.095,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2240,
+      "output_tokens": 10,
+      "seconds": 1.095
+    }
+  ],
+  "reply": "ANSWER: yes | 399?"
+}

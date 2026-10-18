@@ -1,0 +1,84 @@
+{
+  "id": "Q-17",
+  "answer": [
+    "harrowfield",
+    890.0
+  ],
+  "expected": [
+    "Harrowfield",
+    884
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 11190,
+  "output_tokens": 1006,
+  "model_calls": 5,
+  "rounds": null,
+  "votes": 1,
+  "seconds": 11.364,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2238,
+      "output_tokens": 194,
+      "seconds": 2.147
+    },
+    {
+      "input_tokens": 2238,
+      "output_tokens": 196,
+      "seconds": 2.458
+    },
+    {
+      "input_tokens": 2238,
+      "output_tokens": 211,
+      "seconds": 2.29
+    },
+    {
+      "input_tokens": 2238,
+      "output_tokens": 208,
+      "seconds": 2.321
+    },
+    {
+      "input_tokens": 2238,
+      "output_tokens": 197,
+      "seconds": 2.148
+    }
+  ],
+  "samples": [
+    {
+      "reply": "Facts used:\n- Harrowfield: population 90,212; water use 7,146 megalitres.\n- Ossbridge: population 52,904; water use 3,862 megalitres.\n- 1 megalitre = 1,000 cubic metres.\n- 2025 tariff = 142.35 tenge per cubic metre.\n\nCalculations:\n- Harrowfield cost per resident = 7,146 × 1,000 × 142.35 ÷ 90,212 = 11,278.58 tenge.\n- Ossbridge cost per resident = 3,862 × 1,000 × 142.35 ÷ 52,904 = 10,388.76 tenge.\n- Difference = 11,278.58 − 10,388.76 = 889.82, rounded to 890 tenge.\n\nANSWER: Harrowfield | 890",
+      "answer": [
+        "Harrowfield",
+        890.0
+      ]
+    },
+    {
+      "reply": "Facts and calculation:\n\n- Harrowfield used 7,146 megalitres = 7,146,000 cubic metres and had 90,212 residents.\n- Ossbridge used 3,862 megalitres = 3,862,000 cubic metres and had 52,904 residents.\n- The 2025 tariff was 142.35 tenge per cubic metre.\n- Harrowfield cost per resident: \\(7,146,000 \\times 142.35 \\div 90,212 = 11,278.56\\) tenge.\n- Ossbridge cost per resident: \\(3,862,000 \\times 142.35 \\div 52,904 = 10,391.86\\) tenge.\n- Difference: \\(11,278.56 - 10,391.86 = 886.70\\), rounded to 887 tenge.\n\nANSWER: Harrowfield | 887",
+      "answer": [
+        "Harrowfield",
+        887.0
+      ]
+    },
+    {
+      "reply": "Facts and calculation:\n\n- Harrowfield water use: 7,146 megalitres = 7,146,000 cubic metres.\n- Harrowfield population: 90,212.\n- Ossbridge water use: 3,862 megalitres = 3,862,000 cubic metres.\n- Ossbridge population: 52,904.\n- The 2025 tariff is 142.35 tenge per cubic metre.\n- Harrowfield cost per resident: \\(7,146,000 \\times 142.35 \\div 90,212 \\approx 11,278.64\\) tenge.\n- Ossbridge cost per resident: \\(3,862,000 \\times 142.35 \\div 52,904 \\approx 10,392.55\\) tenge.\n- Difference: \\(11,278.64 - 10,392.55 \\approx 886.09\\), which rounds to 886 tenge.\n\nANSWER: Harrowfield | 886",
+      "answer": [
+        "Harrowfield",
+        886.0
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Harrowfield: 7,146 megalitres of household water use and 90,212 residents.\n- Ossbridge: 3,862 megalitres of household water use and 52,904 residents.\n- Tariff: 142.35 tenge per cubic metre.\n- 1 megalitre = 1,000 cubic metres.\n\nCalculations:\n- Harrowfield water cost per resident = \\(7,146 \\times 1,000 \\times 142.35 \\div 90,212 = 11,275.68\\) tenge.\n- Ossbridge water cost per resident = \\(3,862 \\times 1,000 \\times 142.35 \\div 52,904 = 10,391.58\\) tenge.\n- Difference = \\(11,275.68 - 10,391.58 = 884.10\\), which rounds to 884 tenge.\n\nANSWER: Harrowfield | 884",
+      "answer": [
+        "Harrowfield",
+        884.0
+      ]
+    },
+    {
+      "reply": "Facts and calculation:\n\n- Harrowfield water use: 7,146 megalitres = 7,146,000 cubic metres.\n- Harrowfield population: 90,212.\n- Ossbridge water use: 3,862 megalitres = 3,862,000 cubic metres.\n- Ossbridge population: 52,904.\n- 2025 tariff: 142.35 tenge per cubic metre.\n\nHarrowfield cost per resident:\n7,146,000 × 142.35 ÷ 90,212 = 11,277.35 tenge.\n\nOssbridge cost per resident:\n3,862,000 × 142.35 ÷ 52,904 = 10,388.08 tenge.\n\nDifference:\n11,277.35 − 10,388.08 = 889.27 tenge, which rounds to 889 tenge.\n\nANSWER: Harrowfield | 889",
+      "answer": [
+        "Harrowfield",
+        889.0
+      ]
+    }
+  ]
+}

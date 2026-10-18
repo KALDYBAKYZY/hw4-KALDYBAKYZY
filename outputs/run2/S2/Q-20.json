@@ -1,0 +1,84 @@
+{
+  "id": "Q-20",
+  "answer": [
+    "ashgrove",
+    2996.0
+  ],
+  "expected": [
+    "Ashgrove",
+    2993
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 11195,
+  "output_tokens": 1025,
+  "model_calls": 5,
+  "rounds": null,
+  "votes": 2,
+  "seconds": 12.388,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2239,
+      "output_tokens": 163,
+      "seconds": 1.995
+    },
+    {
+      "input_tokens": 2239,
+      "output_tokens": 235,
+      "seconds": 2.186
+    },
+    {
+      "input_tokens": 2239,
+      "output_tokens": 234,
+      "seconds": 2.67
+    },
+    {
+      "input_tokens": 2239,
+      "output_tokens": 235,
+      "seconds": 3.476
+    },
+    {
+      "input_tokens": 2239,
+      "output_tokens": 158,
+      "seconds": 2.061
+    }
+  ],
+  "samples": [
+    {
+      "reply": "Facts and calculations:\n\n- Ossbridge: 9,284.5 million tenge ÷ 52,904 residents = 175,488.43 tenge per resident.\n- Ashgrove: 10,488.1 million tenge ÷ 58,760 residents = 178,490.30 tenge per resident.\n- Harrowfield: 16,021.7 million tenge ÷ 90,212 residents = 177,601.88 tenge per resident.\n- Largest: Ashgrove.\n- Lowest: Ossbridge.\n- Difference: 178,490.30 − 175,488.43 = 3,001.87, which rounds to 3,002 tenge per resident.\n\nANSWER: Ashgrove | 3002",
+      "answer": [
+        "Ashgrove",
+        3002.0
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Ossbridge budget: 9,284.5 million tenge; population: 52,904.\n- Ashgrove budget: 10,488.1 million tenge; population: 58,760.\n- Harrowfield budget: 16,021.7 million tenge; population: 90,212.\n- Convert budgets from millions of tenge to tenge, then divide by residents.\n\nCalculations:\n- Ossbridge: 9,284,500,000 ÷ 52,904 = 175,495.04 tenge per resident.\n- Ashgrove: 10,488,100,000 ÷ 58,760 = 178,491.49 tenge per resident.\n- Harrowfield: 16,021,700,000 ÷ 90,212 = 177,589.81 tenge per resident.\n- Largest: Ashgrove.\n- Difference from lowest: 178,491.49 − 175,495.04 = 2,996.45, rounded to 2,996.\n\nANSWER: Ashgrove | 2996",
+      "answer": [
+        "Ashgrove",
+        2996.0
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Ossbridge: budget 9,284.5 million tenge; population 52,904.\n- Ashgrove: budget 10,488.1 million tenge; population 58,760.\n- Harrowfield: budget 16,021.7 million tenge; population 90,212.\n- Convert each budget from millions to tenge, then divide by residents.\n\nCalculations:\n- Ossbridge: 9,284,500,000 ÷ 52,904 = 175,493.72 tenge per resident.\n- Ashgrove: 10,488,100,000 ÷ 58,760 = 178,492.17 tenge per resident.\n- Harrowfield: 16,021,700,000 ÷ 90,212 = 177,586.29 tenge per resident.\n- Largest: Ashgrove.\n- Difference from lowest, Ossbridge: 178,492.17 − 175,493.72 = 2,998.45, which rounds to 2,998.\n\nANSWER: Ashgrove | 2998",
+      "answer": [
+        "Ashgrove",
+        2998.0
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Ossbridge: budget 9,284.5 million tenge; population 52,904.\n- Ashgrove: budget 10,488.1 million tenge; population 58,760.\n- Harrowfield: budget 16,021.7 million tenge; population 90,212.\n- Convert each budget from million tenge to tenge, then divide by residents.\n\nCalculations:\n- Ossbridge: 9,284,500,000 ÷ 52,904 = 175,497.12 tenge per resident.\n- Ashgrove: 10,488,100,000 ÷ 58,760 = 178,490.64 tenge per resident.\n- Harrowfield: 16,021,700,000 ÷ 90,212 = 177,603.42 tenge per resident.\n- Largest: Ashgrove.\n- Difference from lowest, Ossbridge: 178,490.64 − 175,497.12 = 2,993.52, rounded to 2,994.\n\nANSWER: Ashgrove | 2994",
+      "answer": [
+        "Ashgrove",
+        2994.0
+      ]
+    },
+    {
+      "reply": "Facts and calculations:\n\n- Ossbridge: 9,284.5 million tenge ÷ 52,904 residents = 175,497.69 tenge per resident.\n- Ashgrove: 10,488.1 million tenge ÷ 58,760 residents = 178,493.19 tenge per resident.\n- Harrowfield: 16,021.7 million tenge ÷ 90,212 residents = 177,597.99 tenge per resident.\n- Largest: Ashgrove.\n- Difference from the lowest, Ossbridge: 178,493.19 − 175,497.69 = 2,995.50, rounded to 2,996.\n\nANSWER: Ashgrove | 2996",
+      "answer": [
+        "Ashgrove",
+        2996.0
+      ]
+    }
+  ]
+}

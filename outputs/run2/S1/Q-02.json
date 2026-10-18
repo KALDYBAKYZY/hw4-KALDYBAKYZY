@@ -1,0 +1,28 @@
+{
+  "id": "Q-02",
+  "answer": [
+    "Harrowfield",
+    0.51
+  ],
+  "expected": [
+    "Harrowfield",
+    1.69
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 2223,
+  "output_tokens": 13,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 1.478,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2223,
+      "output_tokens": 13,
+      "seconds": 1.478
+    }
+  ],
+  "reply": "ANSWER: Harrowfield | 0.51"
+}

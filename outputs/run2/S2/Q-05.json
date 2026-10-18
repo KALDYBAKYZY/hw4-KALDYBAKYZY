@@ -1,0 +1,84 @@
+{
+  "id": "Q-05",
+  "answer": [
+    "coldharbour",
+    14258.0
+  ],
+  "expected": [
+    "Coldharbour",
+    14235
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 11140,
+  "output_tokens": 911,
+  "model_calls": 5,
+  "rounds": null,
+  "votes": 1,
+  "seconds": 11.237,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2228,
+      "output_tokens": 177,
+      "seconds": 2.105
+    },
+    {
+      "input_tokens": 2228,
+      "output_tokens": 189,
+      "seconds": 2.457
+    },
+    {
+      "input_tokens": 2228,
+      "output_tokens": 218,
+      "seconds": 2.457
+    },
+    {
+      "input_tokens": 2228,
+      "output_tokens": 156,
+      "seconds": 2.15
+    },
+    {
+      "input_tokens": 2228,
+      "output_tokens": 171,
+      "seconds": 2.067
+    }
+  ],
+  "samples": [
+    {
+      "reply": "Facts used:\n- Stonecairn’s 2025 budget: 2,884.6 million tenge; population: 14,926.\n- Coldharbour’s 2025 budget: 2,366.9 million tenge; population: 11,407.\n- Convert budgets to tenge:\n  - Stonecairn: 2,884,600,000 ÷ 14,926 = 193,277.30 tenge per resident.\n  - Coldharbour: 2,366,900,000 ÷ 11,407 = 207,535.72 tenge per resident.\n- Difference: 207,535.72 − 193,277.30 = 14,258.42, rounded to 14,258 tenge per resident.\n\nANSWER: Coldharbour | 14258",
+      "answer": [
+        "Coldharbour",
+        14258.0
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Stonecairn’s 2025 budget: 2,884.6 million tenge; population: 14,926.\n- Coldharbour’s 2025 budget: 2,366.9 million tenge; population: 11,407.\n- Convert budgets to tenge:\n  - Stonecairn: 2,884,600,000 ÷ 14,926 = 193,273.4 tenge per resident.\n  - Coldharbour: 2,366,900,000 ÷ 11,407 = 207,525.2 tenge per resident.\n- Difference: 207,525.2 − 193,273.4 = 14,251.8, which rounds to 14,252 tenge per resident.\n- Coldharbour had the larger budget per resident.\n\nANSWER: Coldharbour | 14252",
+      "answer": [
+        "Coldharbour",
+        14252.0
+      ]
+    },
+    {
+      "reply": "Facts and calculations:\n\n- Stonecairn’s 2025 budget: 2,884.6 million tenge = 2,884,600,000 tenge.\n- Stonecairn’s 2025 population: 14,926.\n- Stonecairn budget per resident: 2,884,600,000 ÷ 14,926 = 193,229.8 tenge.\n\n- Coldharbour’s 2025 budget: 2,366.9 million tenge = 2,366,900,000 tenge.\n- Coldharbour’s 2025 population: 11,407.\n- Coldharbour budget per resident: 2,366,900,000 ÷ 11,407 = 207,497.2 tenge.\n\n- Difference: 207,497.2 − 193,229.8 = 14,267.4 tenge.\n- Rounded to 0 decimal places: 14,267 tenge per resident.\n\nANSWER: Coldharbour | 14267",
+      "answer": [
+        "Coldharbour",
+        14267.0
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Stonecairn’s 2025 budget: 2,884.6 million tenge; population: 14,926.\n- Coldharbour’s 2025 budget: 2,366.9 million tenge; population: 11,407.\n- Budget per resident:\n  - Stonecairn: 2,884,600,000 ÷ 14,926 ≈ 193,284 tenge.\n  - Coldharbour: 2,366,900,000 ÷ 11,407 ≈ 207,508 tenge.\n- Difference: 207,508 − 193,284 = 14,224 tenge per resident.\n\nANSWER: Coldharbour | 14224",
+      "answer": [
+        "Coldharbour",
+        14224.0
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Stonecairn’s 2025 budget: 2,884.6 million tenge; population: 14,926.\n- Coldharbour’s 2025 budget: 2,366.9 million tenge; population: 11,407.\n- Stonecairn budget per resident = 2,884,600,000 ÷ 14,926 = 193,285.0 tenge.\n- Coldharbour budget per resident = 2,366,900,000 ÷ 11,407 = 207,516.4 tenge.\n- Difference = 207,516.4 − 193,285.0 = 14,231.4, which rounds to 14,231 tenge per resident.\n\nANSWER: Coldharbour | 14231",
+      "answer": [
+        "Coldharbour",
+        14231.0
+      ]
+    }
+  ]
+}

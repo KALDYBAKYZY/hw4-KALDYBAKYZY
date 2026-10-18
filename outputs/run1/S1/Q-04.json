@@ -1,0 +1,28 @@
+{
+  "id": "Q-04",
+  "answer": [
+    "Ashgrove",
+    0.68
+  ],
+  "expected": [
+    "Millbrook",
+    2.59
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 2218,
+  "output_tokens": 13,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 1.042,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2218,
+      "output_tokens": 13,
+      "seconds": 1.042
+    }
+  ],
+  "reply": "ANSWER: Ashgrove | 0.68"
+}

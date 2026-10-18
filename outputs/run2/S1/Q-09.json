@@ -1,0 +1,28 @@
+{
+  "id": "Q-09",
+  "answer": [
+    "Brightwater",
+    4.7
+  ],
+  "expected": [
+    "Millbrook",
+    0.6
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 2217,
+  "output_tokens": 12,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 0.934,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2217,
+      "output_tokens": 12,
+      "seconds": 0.933
+    }
+  ],
+  "reply": "ANSWER: Brightwater | 4.7"
+}

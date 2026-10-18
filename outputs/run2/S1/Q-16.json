@@ -1,0 +1,28 @@
+{
+  "id": "Q-16",
+  "answer": [
+    "yes",
+    23.9
+  ],
+  "expected": [
+    "yes",
+    23.9
+  ],
+  "correct": true,
+  "unanswered": false,
+  "input_tokens": 2217,
+  "output_tokens": 11,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 0.925,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2217,
+      "output_tokens": 11,
+      "seconds": 0.924
+    }
+  ],
+  "reply": "ANSWER: yes | 23.9"
+}

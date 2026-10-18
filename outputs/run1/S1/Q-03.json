@@ -1,0 +1,28 @@
+{
+  "id": "Q-03",
+  "answer": [
+    "Lindenmoor",
+    6.1
+  ],
+  "expected": [
+    "Lindenmoor",
+    5.3
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 2223,
+  "output_tokens": 12,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 1.194,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2223,
+      "output_tokens": 12,
+      "seconds": 1.194
+    }
+  ],
+  "reply": "ANSWER: Lindenmoor | 6.1"
+}

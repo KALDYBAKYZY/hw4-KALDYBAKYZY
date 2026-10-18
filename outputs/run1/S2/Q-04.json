@@ -1,0 +1,84 @@
+{
+  "id": "Q-04",
+  "answer": [
+    "millbrook",
+    2.59
+  ],
+  "expected": [
+    "Millbrook",
+    2.59
+  ],
+  "correct": true,
+  "unanswered": false,
+  "input_tokens": 11135,
+  "output_tokens": 535,
+  "model_calls": 5,
+  "rounds": null,
+  "votes": 5,
+  "seconds": 8.471,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2227,
+      "output_tokens": 111,
+      "seconds": 1.847
+    },
+    {
+      "input_tokens": 2227,
+      "output_tokens": 115,
+      "seconds": 1.653
+    },
+    {
+      "input_tokens": 2227,
+      "output_tokens": 101,
+      "seconds": 1.724
+    },
+    {
+      "input_tokens": 2227,
+      "output_tokens": 116,
+      "seconds": 1.844
+    },
+    {
+      "input_tokens": 2227,
+      "output_tokens": 92,
+      "seconds": 1.403
+    }
+  ],
+  "samples": [
+    {
+      "reply": "Facts and calculation:\n- Ashgrove: 8,837 pupils across 24 schools.\n- Millbrook: 5,562 pupils across 15 schools.\n- Ashgrove average: 8,837 ÷ 24 = 368.21 pupils per school.\n- Millbrook average: 5,562 ÷ 15 = 370.80 pupils per school.\n- Difference: 370.80 − 368.21 = 2.59 pupils per school.\n\nANSWER: Millbrook | 2.59",
+      "answer": [
+        "Millbrook",
+        2.59
+      ]
+    },
+    {
+      "reply": "Facts:\n- Ashgrove: 8,837 pupils across 24 schools.\n- Millbrook: 5,562 pupils across 15 schools.\n- Ashgrove pupils per school: 8,837 ÷ 24 = 368.2083.\n- Millbrook pupils per school: 5,562 ÷ 15 = 370.8.\n- Difference: 370.8 − 368.2083 = 2.5917, which rounds to 2.59.\n\nANSWER: Millbrook | 2.59",
+      "answer": [
+        "Millbrook",
+        2.59
+      ]
+    },
+    {
+      "reply": "Facts and calculation:\n- Ashgrove: 8,837 pupils ÷ 24 schools = 368.2083 pupils per school.\n- Millbrook: 5,562 pupils ÷ 15 schools = 370.8 pupils per school.\n- Difference: 370.8 − 368.2083 = 2.5917, which rounds to 2.59.\n- Millbrook has more pupils per school.\n\nANSWER: Millbrook | 2.59",
+      "answer": [
+        "Millbrook",
+        2.59
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Ashgrove: 8,837 pupils across 24 schools.\n- Millbrook: 5,562 pupils across 15 schools.\n- Ashgrove pupils per school: 8,837 ÷ 24 = 368.2083.\n- Millbrook pupils per school: 5,562 ÷ 15 = 370.8.\n- Difference: 370.8 − 368.2083 = 2.5917, which rounds to 2.59.\n\nANSWER: Millbrook | 2.59",
+      "answer": [
+        "Millbrook",
+        2.59
+      ]
+    },
+    {
+      "reply": "Facts and calculation:\n- Ashgrove: 8,837 pupils ÷ 24 schools = 368.2083 pupils per school.\n- Millbrook: 5,562 pupils ÷ 15 schools = 370.8 pupils per school.\n- Difference: 370.8 − 368.2083 = 2.5917, which rounds to 2.59.\n\nANSWER: Millbrook | 2.59",
+      "answer": [
+        "Millbrook",
+        2.59
+      ]
+    }
+  ]
+}

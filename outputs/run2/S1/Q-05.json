@@ -1,0 +1,28 @@
+{
+  "id": "Q-05",
+  "answer": [
+    "Stonecairn",
+    7197.0
+  ],
+  "expected": [
+    "Coldharbour",
+    14235
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 2219,
+  "output_tokens": 13,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 1.047,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2219,
+      "output_tokens": 13,
+      "seconds": 1.047
+    }
+  ],
+  "reply": "ANSWER: Stonecairn | 7197"
+}

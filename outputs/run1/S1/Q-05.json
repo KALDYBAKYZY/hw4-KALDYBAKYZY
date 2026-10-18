@@ -1,0 +1,28 @@
+{
+  "id": "Q-05",
+  "answer": [
+    "Coldharbour",
+    42042.0
+  ],
+  "expected": [
+    "Coldharbour",
+    14235
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 2219,
+  "output_tokens": 12,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 1.213,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2219,
+      "output_tokens": 12,
+      "seconds": 1.213
+    }
+  ],
+  "reply": "ANSWER: Coldharbour | 42042"
+}

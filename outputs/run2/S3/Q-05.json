@@ -1,0 +1,268 @@
+{
+  "id": "Q-05",
+  "answer": [
+    "Coldharbour",
+    14235.0
+  ],
+  "expected": [
+    "Coldharbour",
+    14235
+  ],
+  "correct": true,
+  "unanswered": false,
+  "input_tokens": 3993,
+  "output_tokens": 264,
+  "model_calls": 4,
+  "rounds": 4,
+  "votes": null,
+  "seconds": 6.104,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 561,
+      "output_tokens": 117,
+      "seconds": 1.639
+    },
+    {
+      "input_tokens": 1016,
+      "output_tokens": 69,
+      "seconds": 1.585
+    },
+    {
+      "input_tokens": 1159,
+      "output_tokens": 43,
+      "seconds": 1.543
+    },
+    {
+      "input_tokens": 1257,
+      "output_tokens": 35,
+      "seconds": 1.336
+    }
+  ],
+  "tool_calls": [
+    {
+      "round": 1,
+      "id": "call_uK8OE8Ix6AS1VbKvkI1hfA5o",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Stonecairn\", \"field\": \"budget_2025_million_tenge\"}",
+      "result": {
+        "district": "Stonecairn",
+        "field": "budget_2025_million_tenge",
+        "value": 2884.6,
+        "unit": "million tenge",
+        "sources": [
+          "NR-06"
+        ],
+        "sentence": "Its 2025 budget was 2,884.6 million tenge, and it maintains 506.8 km of paved road."
+      },
+      "ms": 0.311
+    },
+    {
+      "round": 1,
+      "id": "call_yvtPvDAQnTRnHIs4uju73BVC",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Stonecairn\", \"field\": \"population_2025\"}",
+      "result": {
+        "district": "Stonecairn",
+        "field": "population_2025",
+        "value": 14926,
+        "unit": "residents",
+        "sources": [
+          "NR-06"
+        ],
+        "sentence": "The 2025 census counted 14,926 residents, up from 15,473 at the 2020 census, on an area of 1,742.3 square kilometres."
+      },
+      "ms": 0.048
+    },
+    {
+      "round": 1,
+      "id": "call_upjTIP269rmLEQ7bCuEIaaLB",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Coldharbour\", \"field\": \"budget_2025_million_tenge\"}",
+      "result": {
+        "district": "Coldharbour",
+        "field": "budget_2025_million_tenge",
+        "value": 2366.9,
+        "unit": "million tenge",
+        "sources": [
+          "NR-12"
+        ],
+        "sentence": "Its 2025 budget was 2,366.9 million tenge, and it maintains 598.3 km of paved road."
+      },
+      "ms": 0.065
+    },
+    {
+      "round": 1,
+      "id": "call_hyRHh8WXLSXF8qC6ayUHClzg",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Coldharbour\", \"field\": \"population_2025\"}",
+      "result": {
+        "district": "Coldharbour",
+        "field": "population_2025",
+        "value": 11407,
+        "unit": "residents",
+        "sources": [
+          "NR-12"
+        ],
+        "sentence": "The 2025 census counted 11,407 residents, up from 11,902 at the 2020 census, on an area of 2,318.0 square kilometres."
+      },
+      "ms": 0.036
+    },
+    {
+      "round": 2,
+      "id": "call_EkgYH2iHHNzYB3hyGoA82JLH",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"2884.6 * 1000000 / 14926\"}",
+      "result": {
+        "expression": "2884.6 * 1000000 / 14926",
+        "result": 193260.08307651078
+      },
+      "ms": 0.184
+    },
+    {
+      "round": 2,
+      "id": "call_RATgO2KVdNv9hSTGBUQXgyju",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"2366.9 * 1000000 / 11407\"}",
+      "result": {
+        "expression": "2366.9 * 1000000 / 11407",
+        "result": 207495.39756289998
+      },
+      "ms": 0.035
+    },
+    {
+      "round": 3,
+      "id": "call_UmxXH07oZiTrqRDLu6GskeSu",
+      "tool": "calculate",
+      "arguments": "{\"expression\":\"2366.9 * 1000000 / 11407 - 2884.6 * 1000000 / 14926\"}",
+      "result": {
+        "expression": "2366.9 * 1000000 / 11407 - 2884.6 * 1000000 / 14926",
+        "result": 14235.314486389194
+      },
+      "ms": 0.07
+    }
+  ],
+  "messages": [
+    {
+      "role": "system",
+      "content": "You answer questions about the Nine Rivers Region. You do not have the documents. Use the lookup tool for every fact and the calculate tool for every calculation. You may call several tools in one turn when they do not depend on each other.\n\nEnd your reply with exactly one last line in this format:\nANSWER: <district name or yes/no> | <number>\nWrite the number without units and without thousand separators."
+    },
+    {
+      "role": "user",
+      "content": "Which district had the larger 2025 budget per resident, Stonecairn or Coldharbour, and by how many tenge per resident?\nRound the number to 0 decimal places."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_uK8OE8Ix6AS1VbKvkI1hfA5o",
+          "type": "function",
+          "function": {
+            "name": "lookup",
+            "arguments": "{\"district\": \"Stonecairn\", \"field\": \"budget_2025_million_tenge\"}"
+          }
+        },
+        {
+          "id": "call_yvtPvDAQnTRnHIs4uju73BVC",
+          "type": "function",
+          "function": {
+            "name": "lookup",
+            "arguments": "{\"district\": \"Stonecairn\", \"field\": \"population_2025\"}"
+          }
+        },
+        {
+          "id": "call_upjTIP269rmLEQ7bCuEIaaLB",
+          "type": "function",
+          "function": {
+            "name": "lookup",
+            "arguments": "{\"district\": \"Coldharbour\", \"field\": \"budget_2025_million_tenge\"}"
+          }
+        },
+        {
+          "id": "call_hyRHh8WXLSXF8qC6ayUHClzg",
+          "type": "function",
+          "function": {
+            "name": "lookup",
+            "arguments": "{\"district\": \"Coldharbour\", \"field\": \"population_2025\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_uK8OE8Ix6AS1VbKvkI1hfA5o",
+      "content": "{\"district\": \"Stonecairn\", \"field\": \"budget_2025_million_tenge\", \"value\": 2884.6, \"unit\": \"million tenge\", \"sources\": [\"NR-06\"], \"sentence\": \"Its 2025 budget was 2,884.6 million tenge, and it maintains 506.8 km of paved road.\"}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_yvtPvDAQnTRnHIs4uju73BVC",
+      "content": "{\"district\": \"Stonecairn\", \"field\": \"population_2025\", \"value\": 14926, \"unit\": \"residents\", \"sources\": [\"NR-06\"], \"sentence\": \"The 2025 census counted 14,926 residents, up from 15,473 at the 2020 census, on an area of 1,742.3 square kilometres.\"}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_upjTIP269rmLEQ7bCuEIaaLB",
+      "content": "{\"district\": \"Coldharbour\", \"field\": \"budget_2025_million_tenge\", \"value\": 2366.9, \"unit\": \"million tenge\", \"sources\": [\"NR-12\"], \"sentence\": \"Its 2025 budget was 2,366.9 million tenge, and it maintains 598.3 km of paved road.\"}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_hyRHh8WXLSXF8qC6ayUHClzg",
+      "content": "{\"district\": \"Coldharbour\", \"field\": \"population_2025\", \"value\": 11407, \"unit\": \"residents\", \"sources\": [\"NR-12\"], \"sentence\": \"The 2025 census counted 11,407 residents, up from 11,902 at the 2020 census, on an area of 2,318.0 square kilometres.\"}"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_EkgYH2iHHNzYB3hyGoA82JLH",
+          "type": "function",
+          "function": {
+            "name": "calculate",
+            "arguments": "{\"expression\": \"2884.6 * 1000000 / 14926\"}"
+          }
+        },
+        {
+          "id": "call_RATgO2KVdNv9hSTGBUQXgyju",
+          "type": "function",
+          "function": {
+            "name": "calculate",
+            "arguments": "{\"expression\": \"2366.9 * 1000000 / 11407\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_EkgYH2iHHNzYB3hyGoA82JLH",
+      "content": "{\"expression\": \"2884.6 * 1000000 / 14926\", \"result\": 193260.08307651078}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_RATgO2KVdNv9hSTGBUQXgyju",
+      "content": "{\"expression\": \"2366.9 * 1000000 / 11407\", \"result\": 207495.39756289998}"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_UmxXH07oZiTrqRDLu6GskeSu",
+          "type": "function",
+          "function": {
+            "name": "calculate",
+            "arguments": "{\"expression\":\"2366.9 * 1000000 / 11407 - 2884.6 * 1000000 / 14926\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_UmxXH07oZiTrqRDLu6GskeSu",
+      "content": "{\"expression\": \"2366.9 * 1000000 / 11407 - 2884.6 * 1000000 / 14926\", \"result\": 14235.314486389194}"
+    },
+    {
+      "role": "assistant",
+      "content": "Coldharbour had the larger 2025 budget per resident, by 14,235 tenge per resident.\n\nANSWER: Coldharbour | 14235"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "Q-10",
+  "answer": [
+    "Stonecairn",
+    8.0
+  ],
+  "expected": [
+    "Stonecairn",
+    8
+  ],
+  "correct": true,
+  "unanswered": false,
+  "input_tokens": 2214,
+  "output_tokens": 12,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 1.492,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2214,
+      "output_tokens": 12,
+      "seconds": 1.492
+    }
+  ],
+  "reply": "ANSWER: Stonecairn | 8"
+}

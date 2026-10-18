@@ -1,0 +1,84 @@
+{
+  "id": "Q-07",
+  "answer": [
+    "coldharbour",
+    18.49
+  ],
+  "expected": [
+    "Coldharbour",
+    18.5
+  ],
+  "correct": true,
+  "unanswered": false,
+  "input_tokens": 11180,
+  "output_tokens": 794,
+  "model_calls": 5,
+  "rounds": null,
+  "votes": 5,
+  "seconds": 9.944,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2236,
+      "output_tokens": 159,
+      "seconds": 1.994
+    },
+    {
+      "input_tokens": 2236,
+      "output_tokens": 151,
+      "seconds": 1.951
+    },
+    {
+      "input_tokens": 2236,
+      "output_tokens": 174,
+      "seconds": 1.875
+    },
+    {
+      "input_tokens": 2236,
+      "output_tokens": 150,
+      "seconds": 2.006
+    },
+    {
+      "input_tokens": 2236,
+      "output_tokens": 160,
+      "seconds": 2.118
+    }
+  ],
+  "samples": [
+    {
+      "reply": "Facts used:\n- Coldharbour: 598.3 km of paved road and 11,407 residents.\n- Stonecairn: 506.8 km of paved road and 14,926 residents.\n- Coldharbour road per 1,000 residents: \\(598.3 \\div 11,407 \\times 1,000 = 52.45\\) km.\n- Stonecairn road per 1,000 residents: \\(506.8 \\div 14,926 \\times 1,000 = 33.96\\) km.\n- Difference: \\(52.45 - 33.96 = 18.49\\) km per 1,000 residents.\n\nANSWER: Coldharbour | 18.49",
+      "answer": [
+        "Coldharbour",
+        18.49
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Coldharbour: 598.3 km of paved road and 11,407 residents.\n- Stonecairn: 506.8 km of paved road and 14,926 residents.\n- Coldharbour road per 1,000 residents = 598.3 ÷ 11,407 × 1,000 = 52.45 km.\n- Stonecairn road per 1,000 residents = 506.8 ÷ 14,926 × 1,000 = 33.96 km.\n- Difference = 52.45 − 33.96 = 18.49 km per 1,000 residents.\n\nANSWER: Coldharbour | 18.49",
+      "answer": [
+        "Coldharbour",
+        18.49
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Coldharbour: 598.3 km of paved road and 11,407 residents.\n- Stonecairn: 506.8 km of paved road and 14,926 residents.\n- Paved road per 1,000 residents = paved road ÷ population × 1,000.\n\nCalculations:\n- Coldharbour: 598.3 ÷ 11,407 × 1,000 = 52.45 km per 1,000 residents.\n- Stonecairn: 506.8 ÷ 14,926 × 1,000 = 33.96 km per 1,000 residents.\n- Difference: 52.45 − 33.96 = 18.49 km per 1,000 residents.\n\nANSWER: Coldharbour | 18.49",
+      "answer": [
+        "Coldharbour",
+        18.49
+      ]
+    },
+    {
+      "reply": "Facts:\n- Coldharbour: 598.3 km of paved road; 11,407 residents.\n- Stonecairn: 506.8 km of paved road; 14,926 residents.\n- Coldharbour road per 1,000 residents = 598.3 ÷ 11,407 × 1,000 = 52.45 km.\n- Stonecairn road per 1,000 residents = 506.8 ÷ 14,926 × 1,000 = 33.96 km.\n- Difference = 52.45 − 33.96 = 18.49 km per 1,000 residents.\n\nANSWER: Coldharbour | 18.49",
+      "answer": [
+        "Coldharbour",
+        18.49
+      ]
+    },
+    {
+      "reply": "Facts used:\n- Coldharbour: 598.3 km of paved road and 11,407 residents.\n- Stonecairn: 506.8 km of paved road and 14,926 residents.\n\nCalculations:\n- Coldharbour: \\(598.3 \\div 11,407 \\times 1,000 = 52.45\\) km per 1,000 residents.\n- Stonecairn: \\(506.8 \\div 14,926 \\times 1,000 = 33.96\\) km per 1,000 residents.\n- Difference: \\(52.45 - 33.96 = 18.49\\) km per 1,000 residents.\n\nANSWER: Coldharbour | 18.49",
+      "answer": [
+        "Coldharbour",
+        18.49
+      ]
+    }
+  ]
+}

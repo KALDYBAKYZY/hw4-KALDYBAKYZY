@@ -1,0 +1,28 @@
+{
+  "id": "Q-06",
+  "answer": [
+    "yes",
+    24069.0
+  ],
+  "expected": [
+    "yes",
+    14069
+  ],
+  "correct": false,
+  "unanswered": false,
+  "input_tokens": 2223,
+  "output_tokens": 10,
+  "model_calls": 1,
+  "rounds": null,
+  "votes": null,
+  "seconds": 0.991,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2223,
+      "output_tokens": 10,
+      "seconds": 0.991
+    }
+  ],
+  "reply": "ANSWER: yes | 24069"
+}

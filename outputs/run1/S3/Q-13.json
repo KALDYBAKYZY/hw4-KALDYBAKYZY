@@ -1,0 +1,317 @@
+{
+  "id": "Q-13",
+  "answer": [
+    "Coldharbour",
+    4.16
+  ],
+  "expected": [
+    "Coldharbour",
+    4.16
+  ],
+  "correct": true,
+  "unanswered": false,
+  "input_tokens": 3153,
+  "output_tokens": 271,
+  "model_calls": 3,
+  "rounds": 3,
+  "votes": null,
+  "seconds": 4.605,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 570,
+      "output_tokens": 153,
+      "seconds": 2.135
+    },
+    {
+      "input_tokens": 1199,
+      "output_tokens": 88,
+      "seconds": 1.425
+    },
+    {
+      "input_tokens": 1384,
+      "output_tokens": 30,
+      "seconds": 1.044
+    }
+  ],
+  "tool_calls": [
+    {
+      "round": 1,
+      "id": "call_AOOYWDUn1jNwkCPjvtfuTkLD",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Ossford\", \"field\": \"population_2020\"}",
+      "result": {
+        "district": "Ossford",
+        "field": "population_2020",
+        "value": 31560,
+        "unit": "residents",
+        "sources": [
+          "NR-02"
+        ],
+        "sentence": "Census population: 31,560 in 2020 and 30,982 in 2025."
+      },
+      "ms": 0.25
+    },
+    {
+      "round": 1,
+      "id": "call_Gp9fR93kUatpEJF0wMJd9tn6",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Ossford\", \"field\": \"population_2025\"}",
+      "result": {
+        "district": "Ossford",
+        "field": "population_2025",
+        "value": 30982,
+        "unit": "residents",
+        "sources": [
+          "NR-02"
+        ],
+        "sentence": "Census population: 31,560 in 2020 and 30,982 in 2025."
+      },
+      "ms": 0.023
+    },
+    {
+      "round": 1,
+      "id": "call_OIcKww6RcW3bM19HPIaHDY11",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Stonecairn\", \"field\": \"population_2020\"}",
+      "result": {
+        "district": "Stonecairn",
+        "field": "population_2020",
+        "value": 15473,
+        "unit": "residents",
+        "sources": [
+          "NR-06"
+        ],
+        "sentence": "The 2025 census counted 14,926 residents, up from 15,473 at the 2020 census, on an area of 1,742.3 square kilometres."
+      },
+      "ms": 0.018
+    },
+    {
+      "round": 1,
+      "id": "call_uPgvIiccb0vS5Z4Rfv2EzDxj",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Stonecairn\", \"field\": \"population_2025\"}",
+      "result": {
+        "district": "Stonecairn",
+        "field": "population_2025",
+        "value": 14926,
+        "unit": "residents",
+        "sources": [
+          "NR-06"
+        ],
+        "sentence": "The 2025 census counted 14,926 residents, up from 15,473 at the 2020 census, on an area of 1,742.3 square kilometres."
+      },
+      "ms": 0.013
+    },
+    {
+      "round": 1,
+      "id": "call_hQNYlP9UIfjLNON6r9Oy6eK0",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Coldharbour\", \"field\": \"population_2020\"}",
+      "result": {
+        "district": "Coldharbour",
+        "field": "population_2020",
+        "value": 11902,
+        "unit": "residents",
+        "sources": [
+          "NR-12"
+        ],
+        "sentence": "The 2025 census counted 11,407 residents, up from 11,902 at the 2020 census, on an area of 2,318.0 square kilometres."
+      },
+      "ms": 0.014
+    },
+    {
+      "round": 1,
+      "id": "call_RIP2WRUHFITGwWUnwRi2hfaR",
+      "tool": "lookup",
+      "arguments": "{\"district\": \"Coldharbour\", \"field\": \"population_2025\"}",
+      "result": {
+        "district": "Coldharbour",
+        "field": "population_2025",
+        "value": 11407,
+        "unit": "residents",
+        "sources": [
+          "NR-12"
+        ],
+        "sentence": "The 2025 census counted 11,407 residents, up from 11,902 at the 2020 census, on an area of 2,318.0 square kilometres."
+      },
+      "ms": 0.012
+    },
+    {
+      "round": 2,
+      "id": "call_3Ele2FpqZUVxlVvluRF68bDY",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"(31560-30982)/31560*100\"}",
+      "result": {
+        "expression": "(31560-30982)/31560*100",
+        "result": 1.8314321926489228
+      },
+      "ms": 0.121
+    },
+    {
+      "round": 2,
+      "id": "call_TjUqh8MIy5KJKd9lg2UjvsDk",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"(15473-14926)/15473*100\"}",
+      "result": {
+        "expression": "(15473-14926)/15473*100",
+        "result": 3.535190331545272
+      },
+      "ms": 0.06
+    },
+    {
+      "round": 2,
+      "id": "call_KwWXUfqqFAPiel24y7Kbyc0s",
+      "tool": "calculate",
+      "arguments": "{\"expression\": \"(11902-11407)/11902*100\"}",
+      "result": {
+        "expression": "(11902-11407)/11902*100",
+        "result": 4.1589648798521255
+      },
+      "ms": 0.051
+    }
+  ],
+  "messages": [
+    {
+      "role": "system",
+      "content": "You answer questions about the Nine Rivers Region. You do not have the documents. Use the lookup tool for every fact and the calculate tool for every calculation. You may call several tools in one turn when they do not depend on each other.\n\nEnd your reply with exactly one last line in this format:\nANSWER: <district name or yes/no> | <number>\nWrite the number without units and without thousand separators."
+    },
+    {
+      "role": "user",
+      "content": "Ossford, Stonecairn and Coldharbour all lost population between the 2020 and 2025 censuses. Which lost the largest percentage, and what was that percentage?\nRound the number to 2 decimal places."
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_AOOYWDUn1jNwkCPjvtfuTkLD",
+          "type": "function",
+          "function": {
+            "name": "lookup",
+            "arguments": "{\"district\": \"Ossford\", \"field\": \"population_2020\"}"
+          }
+        },
+        {
+          "id": "call_Gp9fR93kUatpEJF0wMJd9tn6",
+          "type": "function",
+          "function": {
+            "name": "lookup",
+            "arguments": "{\"district\": \"Ossford\", \"field\": \"population_2025\"}"
+          }
+        },
+        {
+          "id": "call_OIcKww6RcW3bM19HPIaHDY11",
+          "type": "function",
+          "function": {
+            "name": "lookup",
+            "arguments": "{\"district\": \"Stonecairn\", \"field\": \"population_2020\"}"
+          }
+        },
+        {
+          "id": "call_uPgvIiccb0vS5Z4Rfv2EzDxj",
+          "type": "function",
+          "function": {
+            "name": "lookup",
+            "arguments": "{\"district\": \"Stonecairn\", \"field\": \"population_2025\"}"
+          }
+        },
+        {
+          "id": "call_hQNYlP9UIfjLNON6r9Oy6eK0",
+          "type": "function",
+          "function": {
+            "name": "lookup",
+            "arguments": "{\"district\": \"Coldharbour\", \"field\": \"population_2020\"}"
+          }
+        },
+        {
+          "id": "call_RIP2WRUHFITGwWUnwRi2hfaR",
+          "type": "function",
+          "function": {
+            "name": "lookup",
+            "arguments": "{\"district\": \"Coldharbour\", \"field\": \"population_2025\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_AOOYWDUn1jNwkCPjvtfuTkLD",
+      "content": "{\"district\": \"Ossford\", \"field\": \"population_2020\", \"value\": 31560, \"unit\": \"residents\", \"sources\": [\"NR-02\"], \"sentence\": \"Census population: 31,560 in 2020 and 30,982 in 2025.\"}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_Gp9fR93kUatpEJF0wMJd9tn6",
+      "content": "{\"district\": \"Ossford\", \"field\": \"population_2025\", \"value\": 30982, \"unit\": \"residents\", \"sources\": [\"NR-02\"], \"sentence\": \"Census population: 31,560 in 2020 and 30,982 in 2025.\"}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_OIcKww6RcW3bM19HPIaHDY11",
+      "content": "{\"district\": \"Stonecairn\", \"field\": \"population_2020\", \"value\": 15473, \"unit\": \"residents\", \"sources\": [\"NR-06\"], \"sentence\": \"The 2025 census counted 14,926 residents, up from 15,473 at the 2020 census, on an area of 1,742.3 square kilometres.\"}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_uPgvIiccb0vS5Z4Rfv2EzDxj",
+      "content": "{\"district\": \"Stonecairn\", \"field\": \"population_2025\", \"value\": 14926, \"unit\": \"residents\", \"sources\": [\"NR-06\"], \"sentence\": \"The 2025 census counted 14,926 residents, up from 15,473 at the 2020 census, on an area of 1,742.3 square kilometres.\"}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_hQNYlP9UIfjLNON6r9Oy6eK0",
+      "content": "{\"district\": \"Coldharbour\", \"field\": \"population_2020\", \"value\": 11902, \"unit\": \"residents\", \"sources\": [\"NR-12\"], \"sentence\": \"The 2025 census counted 11,407 residents, up from 11,902 at the 2020 census, on an area of 2,318.0 square kilometres.\"}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_RIP2WRUHFITGwWUnwRi2hfaR",
+      "content": "{\"district\": \"Coldharbour\", \"field\": \"population_2025\", \"value\": 11407, \"unit\": \"residents\", \"sources\": [\"NR-12\"], \"sentence\": \"The 2025 census counted 11,407 residents, up from 11,902 at the 2020 census, on an area of 2,318.0 square kilometres.\"}"
+    },
+    {
+      "role": "assistant",
+      "content": null,
+      "tool_calls": [
+        {
+          "id": "call_3Ele2FpqZUVxlVvluRF68bDY",
+          "type": "function",
+          "function": {
+            "name": "calculate",
+            "arguments": "{\"expression\": \"(31560-30982)/31560*100\"}"
+          }
+        },
+        {
+          "id": "call_TjUqh8MIy5KJKd9lg2UjvsDk",
+          "type": "function",
+          "function": {
+            "name": "calculate",
+            "arguments": "{\"expression\": \"(15473-14926)/15473*100\"}"
+          }
+        },
+        {
+          "id": "call_KwWXUfqqFAPiel24y7Kbyc0s",
+          "type": "function",
+          "function": {
+            "name": "calculate",
+            "arguments": "{\"expression\": \"(11902-11407)/11902*100\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_3Ele2FpqZUVxlVvluRF68bDY",
+      "content": "{\"expression\": \"(31560-30982)/31560*100\", \"result\": 1.8314321926489228}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_TjUqh8MIy5KJKd9lg2UjvsDk",
+      "content": "{\"expression\": \"(15473-14926)/15473*100\", \"result\": 3.535190331545272}"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_KwWXUfqqFAPiel24y7Kbyc0s",
+      "content": "{\"expression\": \"(11902-11407)/11902*100\", \"result\": 4.1589648798521255}"
+    },
+    {
+      "role": "assistant",
+      "content": "Coldharbour lost the largest percentage of population: **4.16%**.\n\nANSWER: Coldharbour | 4.16"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "Q-18",
+  "answer": [
+    "yes",
+    40013.0
+  ],
+  "expected": [
+    "yes",
+    40013
+  ],
+  "correct": true,
+  "unanswered": false,
+  "input_tokens": 11245,
+  "output_tokens": 604,
+  "model_calls": 5,
+  "rounds": null,
+  "votes": 2,
+  "seconds": 9.754,
+  "temperature_ok": true,
+  "calls": [
+    {
+      "input_tokens": 2249,
+      "output_tokens": 125,
+      "seconds": 1.76
+    },
+    {
+      "input_tokens": 2249,
+      "output_tokens": 105,
+      "seconds": 2.117
+    },
+    {
+      "input_tokens": 2249,
+      "output_tokens": 118,
+      "seconds": 1.887
+    },
+    {
+      "input_tokens": 2249,
+      "output_tokens": 111,
+      "seconds": 1.933
+    },
+    {
+      "input_tokens": 2249,
+      "output_tokens": 145,
+      "seconds": 2.056
+    }
+  ],
+  "samples": [
+    {
+      "reply": "Facts:\n- Millbrook’s 2020 population: 34,590.\n- Millbrook’s 2025 population: 37,203.\n- Growth factor from 2020 to 2025: 37,203 ÷ 34,590.\n- Projected 2030 population: 37,203 × (37,203 ÷ 34,590) = 40,011.37.\n- Rounded to 0 decimal places: 40,011.\n- Since 40,011 exceeds 40,000, the answer is yes.\n\nANSWER: yes | 40011",
+      "answer": [
+        "yes",
+        40011.0
+      ]
+    },
+    {
+      "reply": "Millbrook’s population increased from 34,590 in 2020 to 37,203 in 2025.\n\nGrowth factor: 37,203 ÷ 34,590 = 1.0755429  \nProjected 2030 population: 37,203 × 1.0755429 = 40,012.99  \nRounded projection: 40,013 residents.\n\nSince 40,013 exceeds 40,000, the answer is yes.\n\nANSWER: yes | 40013",
+      "answer": [
+        "yes",
+        40013.0
+      ]
+    },
+    {
+      "reply": "Facts:\n- Millbrook’s 2020 population was 34,590.\n- Its 2025 population was 37,203.\n- Growth factor from 2020 to 2025: 37,203 ÷ 34,590 = 1.075715.\n- Projected 2030 population: 37,203 × 1.075715 = 40,019.999, which rounds to 40,020.\n- Since 40,020 exceeds 40,000, the answer is yes.\n\nANSWER: yes | 40020",
+      "answer": [
+        "yes",
+        40020.0
+      ]
+    },
+    {
+      "reply": "Millbrook facts:\n- 2020 population: 34,590\n- 2025 population: 37,203\n\nCalculation:\n- Growth factor = 37,203 ÷ 34,590 = 1.075483\n- Projected 2030 population = 37,203 × 1.075483 = 40,010.35\n- Rounded projection = 40,010\n- Since 40,010 exceeds 40,000, the answer is yes.\n\nANSWER: yes | 40010",
+      "answer": [
+        "yes",
+        40010.0
+      ]
+    },
+    {
+      "reply": "Facts and calculation:\n- Millbrook’s 2020 population: 34,590.\n- Millbrook’s 2025 population: 37,203.\n- Growth factor from 2020 to 2025: 37,203 ÷ 34,590 = 1.0755429.\n- Projected 2030 population: 37,203 × 1.0755429 = 39,? Wait, calculating directly: 37,203² ÷ 34,590 = 40,012.6.\n- Rounded to 0 decimal places: 40,013.\n- Therefore, it will exceed 40,000 residents.\n\nANSWER: yes | 40013",
+      "answer": [
+        "yes",
+        40013.0
+      ]
+    }
+  ]
+}
