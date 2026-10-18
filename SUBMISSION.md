@@ -264,17 +264,34 @@ tests/test_tools.py::test_calculate_bad_text_returns_errors_not_crash PASSED    
 
 ### B3 — The loop
 
-- Round limit, and why:
-- Where the logs are:
-- Real Q-09 conversation compared with my A3 version, what is different:
+- Round limit, and why: 10 model calls per question. By my A3 plan, Q-09 needs 4 calls (3 tool rounds + the answer), and the real Q-09 run also used 4. The hardest questions (three districts: Q-11, Q-13, Q-20) need about 4–6. So 10 gives space for one or two retries after an error, but stops a loop that never ends and costs money. If a question hits the limit, it is marked unanswered.
+- Where the logs are: `outputs/run<N>/<strategy>/<question id>.json` (for example `outputs/run1/S3/Q-09.json`). For S3 each file has every tool call (round, id, tool, arguments, result, time in ms), every model call (input tokens, output tokens, seconds) and the full conversation. `outputs/run<N>/summary.json` has the totals.
+- Real Q-09 conversation compared with my A3 version, what is different: (log: `outputs/run0/S3/Q-09.json`)
+  The real conversation was very close to my plan. Like in A3, the model used 4 model calls: round 1 asked for all 4 facts at once (4 × lookup), round 2 made the two densities (2 × calculate), round 3 the difference, and round 4 was the final answer `Millbrook | 0.6`. The tool returned the corrected area 921.4 (sources NR-05 and NR-16), so the trap did not reach the model.
+  Differences:
+  1. The tool call ids are random strings from OpenAI (for example `call_kCYAd3zggXFQavaoXmXNehyZ`), not `call_1`, `call_2`. My loop only copies them back, so this does not matter.
+  2. In round 3 I expected the model to subtract the two results from round 2 (`49.0416… - 48.4859…`). Instead it wrote the whole formula again from the raw numbers: `37203 / 758.6 - 44675 / 921.4`. The result is the same (0.5556…), but it shows that round 2 was not really needed: the model could do it in one calculate call.
+  3. The whole question used 3,728 input and 221 output tokens. Most of the input tokens come from sending the growing conversation again in every round.
 
 ### B4 — Three strategies
 
 **What I kept the same:**
 
-<!-- model, temperature, k, prompts, answer format, anything else -->
+- model: `gpt-5.6-luna` for every call (Chat Completions API)
+- the same 20 questions, and the same user message: the question + "Round the number to N decimal places" (N from the question, never the answer)
+- the same answer format for all: last line `ANSWER: <name or yes/no> | <number>`, and the same code reads it (`parse_answer` in strategies.py)
+- the same system rules about archived profiles, corrections and units (S1 and S2 get them with the documents, S3 gets tools that do it)
+- temperature = 1.0 for every call (the model accepted it: `temperature_ok=True` in the summary)
+- reasoning_effort = "none" for every call (needed for tools in Chat Completions; kept the same for S1 and S2)
+- S1 and S2: the same system prompt and the same 17 documents; the only difference is one line ("give the answer directly" vs "think step by step") and k
+- S2: k = 5, majority vote on (name, number rounded to N decimals)
+- S3: no documents, only the two tools; round limit 10
+- the same scoring code for all strategies (`is_correct` in run.py)
+- prices for cost: $0.20 per 1M input tokens and $1.20 per 1M output tokens (OpenAI pricing page, gpt-5.6-luna, short context, checked on 18 October 2026). I do not count cached-input discounts, so the real cost can be a little lower.
 
 **My rule for a correct answer** (written before the first full run):
+
+The answer is correct if (1) the name is the same as in questions.json, ignoring upper/lower case and spaces, and (2) the number, rounded to the question's decimals, differs from `value` by at most 1 in the last digit (for example, for Q-09 with 1 decimal, 0.5, 0.6 and 0.7 are accepted). No ANSWER line = unanswered = wrong. I allow 1 in the last digit because a correct method can still round a little differently at the end. The code for this rule is `is_correct` in run.py.
 
 | Run | Strategy | Correct /20 | Unanswered | Input tokens | Output tokens | Median seconds per question | Total seconds | Cost ($) |
 |---|---|---:|---:|---:|---:|---:|---:|---:|

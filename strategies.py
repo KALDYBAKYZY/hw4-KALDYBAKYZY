@@ -18,6 +18,10 @@ MODEL = "gpt-5.6-luna"
 K_SAMPLES = 5          # S2: how many times we ask
 MAX_ROUNDS = 10        # S3: how many model calls one question may use
 TEMPERATURE = 1.0      # same for every strategy; S2 needs it so the 5 answers vary
+# gpt-5.6-luna does not allow tools together with hidden reasoning in /v1/chat/completions,
+# so S3 needs reasoning_effort="none". We use the same value for S1 and S2 too,
+# so the only difference between the strategies is the strategy itself.
+REASONING_EFFORT = "none"
 
 CORPUS_PATH = Path(__file__).parent / "data" / "corpus.jsonl"
 
@@ -89,7 +93,7 @@ class Recorder:
         self.temperature_ok = True
 
     def chat(self, messages, tools=None):
-        kwargs = {"model": MODEL, "messages": messages}
+        kwargs = {"model": MODEL, "messages": messages, "reasoning_effort": REASONING_EFFORT}
         if tools:
             kwargs["tools"] = tools
         if self.temperature_ok:

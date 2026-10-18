@@ -1,0 +1,47 @@
+{
+  "S1": {
+    "questions": 1,
+    "correct": 0,
+    "unanswered": 0,
+    "input_tokens": 2217,
+    "output_tokens": 12,
+    "median_seconds": 1.44,
+    "total_seconds": 1.44,
+    "cost_usd": 0.0004578,
+    "temperature_ok": true,
+    "model": "gpt-5.6-luna",
+    "per_question": {
+      "Q-09": false
+    }
+  },
+  "S2": {
+    "questions": 1,
+    "correct": 1,
+    "unanswered": 0,
+    "input_tokens": 11130,
+    "output_tokens": 638,
+    "median_seconds": 9.96,
+    "total_seconds": 9.96,
+    "cost_usd": 0.0029916,
+    "temperature_ok": true,
+    "model": "gpt-5.6-luna",
+    "per_question": {
+      "Q-09": true
+    }
+  },
+  "S3": {
+    "questions": 1,
+    "correct": 1,
+    "unanswered": 0,
+    "input_tokens": 3728,
+    "output_tokens": 221,
+    "median_seconds": 6.24,
+    "total_seconds": 6.24,
+    "cost_usd": 0.0010108,
+    "temperature_ok": true,
+    "model": "gpt-5.6-luna",
+    "per_question": {
+      "Q-09": true
+    }
+  }
+}

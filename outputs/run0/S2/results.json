@@ -1,0 +1,22 @@
+[
+  {
+    "id": "Q-09",
+    "answer": [
+      "millbrook",
+      0.5
+    ],
+    "expected": [
+      "Millbrook",
+      0.6
+    ],
+    "correct": true,
+    "unanswered": false,
+    "input_tokens": 11130,
+    "output_tokens": 638,
+    "model_calls": 5,
+    "rounds": null,
+    "votes": 3,
+    "seconds": 9.957,
+    "temperature_ok": true
+  }
+]
