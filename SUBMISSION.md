@@ -214,12 +214,52 @@ I also did not choose a `lookup` that searches text and gives back sentences. Th
 
 ### What I changed from Part A while coding
 
-<!-- what changed in your plan, and why. "None" is an answer too. -->
+The main plan did not change: `lookup(district, field)` and `calculate(expression)` work as in A2, and steps 2–5 are inside `lookup`. I only added small things:
+
+- **`calculate` gives more exact error messages.** In Part A I wrote `"not allowed"`. In the code it says what is not allowed, for example `"not allowed: Call"` or `"not allowed: Attribute"`. This helps the model to understand its mistake.
+- **`calculate` explains commas.** If the model writes `52,904`, Python reads it as two numbers. The tool now says: "write numbers without commas".
+- **`calculate` has a limit for the result.** Not only the exponent is limited (max 100), but also the result (max 10^15). Without this, `10**20` would be allowed.
+- **`calculate` refuses `True` and `False`.** In Python they are numbers (1 and 0), but they are not real numbers for maths.
+- **`lookup` cuts very long names to 100 characters** before searching, so strange long input cannot slow it down.
+- **`lookup` reads corrections with one rule:** it looks for "The correct <area / population / budget> is <number>" in a correction notice. This works for NR-16 and for future notices written the same way.
+- **If no name is similar**, `lookup` returns the list of all 12 districts, so the model can choose the right one.
 
 ### B2 — Tests
 
 ```text
-<!-- pytest output -->
+=============================================================== test session starts ================================================================
+platform darwin -- Python 3.12.7, pytest-9.1.1, pluggy-1.7.0 -- /Users/gulnazzhaiylgan/hw4-KALDYBAKYZY/hw4-KALDYBAKYZY/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/gulnazzhaiylgan/hw4-KALDYBAKYZY/hw4-KALDYBAKYZY
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.15.1
+collected 21 items                                                                                                                                 
+
+tests/test_tools.py::test_lookup_finds_2025_population PASSED                                                                                [  4%]
+tests/test_tools.py::test_lookup_finds_2020_population_in_another_text_style PASSED                                                          [  9%]
+tests/test_tools.py::test_lookup_misspelled_name_gives_suggestions PASSED                                                                    [ 14%]
+tests/test_tools.py::test_lookup_similar_names_are_not_mixed PASSED                                                                          [ 19%]
+tests/test_tools.py::test_lookup_ignores_archived_profile PASSED                                                                             [ 23%]
+tests/test_tools.py::test_lookup_uses_correction_notice PASSED                                                                               [ 28%]
+tests/test_tools.py::test_lookup_correction_does_not_change_other_fields PASSED                                                              [ 33%]
+tests/test_tools.py::test_lookup_changes_cubic_metres_to_megalitres PASSED                                                                   [ 38%]
+tests/test_tools.py::test_lookup_water_tariff PASSED                                                                                         [ 42%]
+tests/test_tools.py::test_lookup_bad_inputs_return_errors_not_crash PASSED                                                                   [ 47%]
+tests/test_tools.py::test_lookup_returns_a_sentence_not_the_whole_document PASSED                                                            [ 52%]
+tests/test_tools.py::test_calculate_simple_division PASSED                                                                                   [ 57%]
+tests/test_tools.py::test_calculate_multiplication_from_the_task PASSED                                                                      [ 61%]
+tests/test_tools.py::test_calculate_brackets_and_minus PASSED                                                                                [ 66%]
+tests/test_tools.py::test_calculate_refuses_dangerous_input_quickly[__import__('os').system('echo hi')] PASSED                               [ 71%]
+tests/test_tools.py::test_calculate_refuses_dangerous_input_quickly[(1).__class__] PASSED                                                    [ 76%]
+tests/test_tools.py::test_calculate_refuses_dangerous_input_quickly[9**9**9] PASSED                                                          [ 80%]
+tests/test_tools.py::test_calculate_division_by_zero PASSED                                                                                  [ 85%]
+tests/test_tools.py::test_calculate_too_big_result PASSED                                                                                    [ 90%]
+tests/test_tools.py::test_calculate_refuses_names_strings_and_commas PASSED                                                                  [ 95%]
+tests/test_tools.py::test_calculate_bad_text_returns_errors_not_crash PASSED                                                                 [100%]
+
+================================================================ 21 passed in 0.03s ================================================================
+
 ```
 
 ### B3 — The loop
