@@ -1,13 +1,3 @@
-"""Run the strategies on the questions and save everything in outputs/.
-
-Examples:
-    python run.py --run 0 --strategies S3 --questions Q-09          # one test question
-    python run.py --run 0 --questions Q-01 Q-08 Q-09                # three test questions
-    python run.py --run 1                                           # full run 1
-    python run.py --run 2                                           # full run 2
-    python run.py --run c1 --strategies S3 --questions Q-03 Q-08 Q-09 Q-11 Q-20 --vague
-"""
-
 import argparse
 import json
 import os
@@ -24,7 +14,6 @@ from tools import TOOL_DEFINITIONS
 QUESTIONS_PATH = Path(__file__).parent / "data" / "questions.json"
 OUTPUTS = Path(__file__).parent / "outputs"
 
-
 def is_correct(answer, question):
     """My rule (written before the first full run):
     - the name must match exactly (ignoring upper/lower case and spaces),
@@ -40,20 +29,17 @@ def is_correct(answer, question):
 
 
 def cost(input_tokens, output_tokens):
-    """Prices in USD per 1 million tokens, from the OpenAI pricing page, set in .env."""
     price_in = os.getenv("PRICE_INPUT_PER_M")
     price_out = os.getenv("PRICE_OUTPUT_PER_M")
     if not price_in or not price_out:
         return None
     return input_tokens / 1e6 * float(price_in) + output_tokens / 1e6 * float(price_out)
 
-
 def vague_definitions():
     """C1: the same tools, but lookup has a one-line description."""
     defs = json.loads(json.dumps(TOOL_DEFINITIONS))
     defs[0]["function"]["description"] = "Looks things up."
     return defs
-
 
 def main():
     parser = argparse.ArgumentParser()
@@ -66,7 +52,7 @@ def main():
     load_dotenv()
     if not os.getenv("OPENAI_API_KEY"):
         raise SystemExit("OPENAI_API_KEY is missing: put it in .env")
-    client = OpenAI()  # reads the key from the environment; the key is never printed or saved
+    client = OpenAI()  
 
     questions = json.loads(QUESTIONS_PATH.read_text(encoding="utf-8"))
     if args.questions:
@@ -104,8 +90,6 @@ def main():
                 "temperature_ok": result["temperature_ok"],
             }
             rows.append(row)
-
-            # full log of this question: every call, tool call, result and time
             (out_dir / f"{q['id']}.json").write_text(
                 json.dumps({**row, "calls": result["calls"], **result["log"]}, indent=2, ensure_ascii=False),
                 encoding="utf-8",

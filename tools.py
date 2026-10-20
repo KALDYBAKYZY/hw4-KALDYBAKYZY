@@ -1,8 +1,3 @@
-"""Two tools for the model: lookup (facts from the documents) and calculate (safe maths).
-
-Both functions never crash: if something is wrong they return {"error": "..."}.
-"""
-
 import ast
 import difflib
 import json
@@ -11,13 +6,8 @@ import re
 from pathlib import Path
 
 CORPUS_PATH = Path(__file__).parent / "data" / "corpus.jsonl"
-
-# A number in the text, for example "1,284.6" or "52,904" or "1871".
 NUM = r"(\d[\d,]*(?:\.\d+)?)"
 
-# For each field: regex patterns that find the number in a district profile.
-# The profiles are written in three different styles, so some fields need
-# more than one pattern. The first pattern that matches is used.
 FIELD_PATTERNS = {
     "population_2025": [
         r"2025 census (?:recorded|counted) " + NUM + r" residents",
@@ -52,7 +42,6 @@ UNITS = {
 
 ALLOWED_FIELDS = list(UNITS.keys())
 
-# Word used in a correction notice ("The correct area is ...") -> field name.
 CORRECTION_WORDS = {
     "area": "area_km2",
     "population": "population_2025",
@@ -61,12 +50,10 @@ CORRECTION_WORDS = {
 
 MAX_INPUT_LENGTH = 100
 
-
 def to_number(text):
     """'1,284.6' -> 1284.6 and '52,904' -> 52904."""
     text = text.replace(",", "")
     return float(text) if "." in text else int(text)
-
 
 def sentence_with(text, fragment):
     """Return only the sentence that contains the number (not the whole document)."""
@@ -75,12 +62,10 @@ def sentence_with(text, fragment):
             return sentence
     return ""
 
-
 def load_corpus(path=CORPUS_PATH):
-    """Read the documents and sort them into profiles, corrections and others."""
-    profiles = {}      # district name -> current (not archived) profile
-    archived = {}      # district name -> list of archived profiles
-    corrections = {}   # district name -> list of correction notices
+    profiles = {}     
+    archived = {}      
+    corrections = {}   
     tariff_doc = None
 
     with open(path, encoding="utf-8") as f:
@@ -110,12 +95,9 @@ def load_corpus(path=CORPUS_PATH):
 
     return profiles, archived, corrections, tariff_doc
 
-
 PROFILES, ARCHIVED, CORRECTIONS, TARIFF_DOC = load_corpus()
 
-
 def find_district(name):
-    """Step 2: exact name (ignoring case and spaces) -> real name, or an error."""
     clean = name.strip().lower()
     all_names = sorted(set(PROFILES) | set(ARCHIVED))
     for real_name in all_names:
@@ -127,7 +109,6 @@ def find_district(name):
         return None, f"no district named '{name}'; did you mean {' or '.join(similar)}?"
     return None, f"no district named '{name}'; districts are: {', '.join(all_names)}"
 
-
 def read_correction(district, field):
     """Step 5: if a correction notice changes this field, return (value, doc_id)."""
     for notice in CORRECTIONS.get(district, []):
@@ -136,14 +117,10 @@ def read_correction(district, field):
             return to_number(match.group(2)), notice["id"], sentence_with(notice["text"], match.group(2))
     return None
 
-
 def lookup(district=None, field=None):
-    """Return one 2025 number for one district, with the documents it came from."""
-    # --- check the inputs ---
     if not isinstance(field, str) or field not in ALLOWED_FIELDS:
         return {"error": f"unknown field '{field}'; allowed fields: {', '.join(ALLOWED_FIELDS)}"}
 
-    # --- the water tariff is not about one district ---
     if field == "water_tariff_2025":
         if TARIFF_DOC is None:
             return {"error": "the water tariff document was not found"}
@@ -162,17 +139,14 @@ def lookup(district=None, field=None):
         return {"error": f"field '{field}' needs a district name"}
     district = district[:MAX_INPUT_LENGTH]
 
-    # --- step 2: find the district ---
     name, error = find_district(district)
     if error:
-        return {"error": error}
+           return {"error": error}
 
-    # --- step 3: choose the current profile, never an archived one ---
     doc = PROFILES.get(name)
     if doc is None:
         return {"error": f"only an ARCHIVED profile found for {name}; it must not be used"}
 
-    # --- step 5a: a correction notice is stronger than the profile ---
     correction = read_correction(name, field)
     if correction:
         value, notice_id, sentence = correction
@@ -186,7 +160,6 @@ def lookup(district=None, field=None):
             "note": f"corrected by {notice_id}",
         }
 
-    # --- step 4: read the number from the profile ---
     for pattern in FIELD_PATTERNS[field]:
         match = re.search(pattern, doc["text"])
         if match:
@@ -209,11 +182,10 @@ def lookup(district=None, field=None):
         "sentence": sentence_with(doc["text"], raw),
     }
 
-    # --- step 5b: water must always be in megalitres ---
     if field == "water_use_2025_megalitres":
         unit_in_text = match.group(2)
         if unit_in_text == "cubic metres":
-            result["value"] = value / 1000  # 1 megalitre = 1,000 cubic metres (NR-15)
+            result["value"] = value / 1000  
             result["note"] = f"profile gives {raw} cubic metres; changed to megalitres (1 ML = 1,000 m3)"
         elif unit_in_text != "megalitres":
             return {"error": f"unknown water unit '{unit_in_text}' in {doc['id']}"}
@@ -221,9 +193,7 @@ def lookup(district=None, field=None):
     return result
 
 
-# ---------------------------------------------------------------------------
 # calculate
-# ---------------------------------------------------------------------------
 
 MAX_EXPRESSION_LENGTH = 200
 MAX_EXPONENT = 100
@@ -238,23 +208,18 @@ OPERATORS = {
 }
 UNARY = {ast.USub: operator.neg, ast.UAdd: operator.pos}
 
-
 class CalcError(Exception):
     pass
 
-
 def check_size(x):
-    if x != x or abs(x) > MAX_ABS_RESULT:  # x != x is True only for NaN
+    if x != x or abs(x) > MAX_ABS_RESULT:  
         raise CalcError(f"result is larger than {MAX_ABS_RESULT:g}")
     return x
 
-
 def evaluate(node):
-    """Walk the tree from ast. Only numbers and + - * / ** are allowed."""
     if isinstance(node, ast.Expression):
         return evaluate(node.body)
 
-    # a number (bool is also an int in Python, so refuse it explicitly)
     if isinstance(node, ast.Constant) and type(node.value) in (int, float):
         return check_size(node.value)
 
@@ -276,7 +241,6 @@ def evaluate(node):
         except OverflowError:
             raise CalcError(f"result is larger than {MAX_ABS_RESULT:g}")
 
-    # anything else: a name, a function call, an attribute, a string, ...
     raise CalcError(f"not allowed: {type(node).__name__}")
 
 
@@ -288,7 +252,7 @@ def calculate(expression=None):
         return {"error": f"could not read the expression: longer than {MAX_EXPRESSION_LENGTH} characters"}
 
     try:
-        tree = ast.parse(expression, mode="eval")  # only READS the text, runs nothing
+        tree = ast.parse(expression, mode="eval") 
     except SyntaxError as e:
         return {"error": f"could not read the expression: {e.msg}"}
 
@@ -299,13 +263,12 @@ def calculate(expression=None):
         if message == "not allowed: Tuple":
             message += " (write numbers without commas: 52904, not 52,904)"
         return {"error": message}
-    except Exception as e:  # last safety net: the tool must never crash
+    except Exception as e: 
         return {"error": f"could not calculate: {e}"}
 
     return {"expression": expression, "result": result}
 
 
-# The definitions sent to the model (the same as in Part A).
 TOOL_DEFINITIONS = [
     {
         "type": "function",

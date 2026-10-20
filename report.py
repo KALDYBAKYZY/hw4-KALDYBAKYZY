@@ -1,23 +1,15 @@
-"""Make the two B4 tables for SUBMISSION.md from outputs/run1 and outputs/run2.
-
-    python report.py
-"""
-
 import json
 from pathlib import Path
 
 OUTPUTS = Path(__file__).parent / "outputs"
 NAMES = {"S1": "S1 direct", "S2": "S2 think and vote (k = 5)", "S3": "S3 tools"}
 
-
 def load(run):
     path = OUTPUTS / f"run{run}" / "summary.json"
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
 
-
 def money(x):
     return "n/a" if x is None else f"{x:.4f}"
-
 
 print("| Run | Strategy | Correct /20 | Unanswered | Input tokens | Output tokens "
       "| Median seconds per question | Total seconds | Cost ($) |")

@@ -1,10 +1,3 @@
-"""The three strategies (S1, S2, S3) and the tool loop.
-
-Every strategy gets the same question text and must end with the same line:
-    ANSWER: <name or yes/no> | <number>
-Every call to the model is recorded (tokens and seconds) so run.py can add them up.
-"""
-
 import json
 import os
 import re
@@ -15,12 +8,9 @@ from pathlib import Path
 from tools import TOOL_DEFINITIONS, TOOLS
 
 MODEL = "gpt-5.6-luna"
-K_SAMPLES = 5          # S2: how many times we ask
-MAX_ROUNDS = 10        # S3: how many model calls one question may use
-TEMPERATURE = 1.0      # same for every strategy; S2 needs it so the 5 answers vary
-# gpt-5.6-luna does not allow tools together with hidden reasoning in /v1/chat/completions,
-# so S3 needs reasoning_effort="none". We use the same value for S1 and S2 too,
-# so the only difference between the strategies is the strategy itself.
+K_SAMPLES = 5          
+MAX_ROUNDS = 10     
+TEMPERATURE = 1.0     
 REASONING_EFFORT = "none"
 
 CORPUS_PATH = Path(__file__).parent / "data" / "corpus.jsonl"
@@ -48,7 +38,6 @@ SYSTEM_TOOLS = (
     + ANSWER_RULE
 )
 
-
 def load_documents_text():
     """All 17 documents as one text block (for S1 and S2)."""
     lines = []
@@ -59,16 +48,11 @@ def load_documents_text():
                 lines.append(f"[{doc['id']}] {doc['title']}\n{doc['text']}")
     return "\n\n".join(lines)
 
-
 DOCUMENTS = load_documents_text()
-
 
 def user_message(question):
     """The same user message for all three strategies. Uses the decimals, never the answer."""
     return f"{question['question']}\nRound the number to {question['decimals']} decimal places."
-
-
-# ------------------------------------------------------------------ helpers ---
 
 def parse_answer(text):
     """Find the last 'ANSWER: name | number' line. Returns (name, number) or None."""
@@ -83,9 +67,7 @@ def parse_answer(text):
     except ValueError:
         return None
 
-
 class Recorder:
-    """Calls the model and remembers tokens and time of every call."""
 
     def __init__(self, client):
         self.client = client
@@ -103,8 +85,6 @@ class Recorder:
         try:
             response = self.client.chat.completions.create(**kwargs)
         except Exception as e:
-            # Some models do not accept 'temperature'. Then we try again without it
-            # and write this down, because B4 asks us to say so.
             if "temperature" in str(e).lower() and self.temperature_ok:
                 self.temperature_ok = False
                 kwargs.pop("temperature")
@@ -122,9 +102,6 @@ class Recorder:
         })
         return response.choices[0].message
 
-
-# --------------------------------------------------------------- strategies ---
-
 def run_s1(client, question):
     rec = Recorder(client)
     messages = [
@@ -139,7 +116,6 @@ def run_s1(client, question):
         "log": {"reply": reply.content},
     }
 
-
 def run_s2(client, question, k=K_SAMPLES):
     rec = Recorder(client)
     messages = [
@@ -151,7 +127,6 @@ def run_s2(client, question, k=K_SAMPLES):
         reply = rec.chat(messages)
         samples.append({"reply": reply.content, "answer": parse_answer(reply.content)})
 
-    # Vote: same name (ignoring case) and same number after rounding to the asked decimals.
     keys = []
     for s in samples:
         if s["answer"]:
@@ -171,10 +146,7 @@ def run_s2(client, question, k=K_SAMPLES):
         "log": {"samples": samples},
     }
 
-
 def check_arguments(name, raw_arguments):
-    """Read the JSON string from the model and check it before running anything.
-    Returns (arguments, None) or (None, error message)."""
     if name not in TOOLS:
         return None, f"unknown tool '{name}'"
     try:
@@ -193,7 +165,6 @@ def check_arguments(name, raw_arguments):
             return None, f"unknown argument '{key}'"
     return args, None
 
-
 def message_to_dict(message):
     """Keep the model's message unchanged, including its tool_calls."""
     data = {"role": "assistant", "content": message.content}
@@ -208,7 +179,6 @@ def message_to_dict(message):
         ]
     return data
 
-
 def run_s3(client, question, tool_definitions=TOOL_DEFINITIONS, max_rounds=MAX_ROUNDS):
     rec = Recorder(client)
     messages = [
@@ -221,7 +191,7 @@ def run_s3(client, question, tool_definitions=TOOL_DEFINITIONS, max_rounds=MAX_R
         reply = rec.chat(messages, tools=tool_definitions)
         messages.append(message_to_dict(reply))
 
-        if not reply.tool_calls:  # no requests -> this is the final answer
+        if not reply.tool_calls:
             return {
                 "answer": parse_answer(reply.content),
                 "rounds": round_number,
@@ -230,7 +200,6 @@ def run_s3(client, question, tool_definitions=TOOL_DEFINITIONS, max_rounds=MAX_R
                 "log": {"tool_calls": tool_log, "messages": messages},
             }
 
-        # answer EVERY tool_call_id, even when the arguments are bad
         for call in reply.tool_calls:
             start = time.time()
             args, error = check_arguments(call.function.name, call.function.arguments)
@@ -247,7 +216,6 @@ def run_s3(client, question, tool_definitions=TOOL_DEFINITIONS, max_rounds=MAX_R
             })
             messages.append({"role": "tool", "tool_call_id": call.id, "content": json.dumps(result)})
 
-    # hit the round limit -> unanswered
     return {
         "answer": None,
         "rounds": max_rounds,
@@ -256,6 +224,5 @@ def run_s3(client, question, tool_definitions=TOOL_DEFINITIONS, max_rounds=MAX_R
         "temperature_ok": rec.temperature_ok,
         "log": {"tool_calls": tool_log, "messages": messages},
     }
-
 
 STRATEGIES = {"S1": run_s1, "S2": run_s2, "S3": run_s3}
